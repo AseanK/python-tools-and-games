@@ -1,6 +1,6 @@
 import os
 from sys import platform
-
+from ascii_art import logo
 # Clears command line
 def clear():
     if platform == "linux" or platform == "linux2":
@@ -43,13 +43,24 @@ def calcBid(players):
 
 clear()
 
+print(logo)
 # Adds player
 bidding = True
 while bidding:
     name =  input("Enter your name\n")
-    bidAmount = int(input("Enter the bidding amount\n$"))
+    while True:
+        bidAmount = input("Enter the bidding amount\n$")
+        if bidAmount.isdigit():
+            bidAmount = int(bidAmount)
+            if bidAmount > 0:
+                break
+            else:
+                print("You have to bid more than $0")
+        else:
+            print(f"{bidAmount} is not a number")
 
     players[name] = bidAmount
+
 
     cont = (input("Add another player?\nEnter 'Yes' or 'No'\n")).lower()
 
