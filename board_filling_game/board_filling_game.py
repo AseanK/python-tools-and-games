@@ -19,7 +19,8 @@ def welcome():
     print("Welcome to Board Filling Game.")
     print("Rules: ")
     print("1. Enter coordinates to put the pieces on the board.")
-    print("2. Enter (0, 0) to pass the turn.\n")
+    print("2. Enter (0, 0) to skip the round.")
+    print("3. Try to fill the board in as few rounds as possible!\n")
 
     print("Please enter the board size you want.")
     height = 3
@@ -132,6 +133,7 @@ if __name__=="__main__":
     # Welcome the player
     clear()
     height, width = welcome()
+    print()
 
     # Create a heightxwidth board
     game_board = [(["□"] * width) for x in range(height)]
