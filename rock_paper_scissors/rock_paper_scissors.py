@@ -2,6 +2,7 @@
 ### ROCK PAPER SCISSORS GAME ###
 
 # Imports
+import os
 import random
 from time import sleep
 
@@ -18,6 +19,10 @@ choices: list[str] = ['rock', 'paper', 'scissors']
 player_score: int = 0
 CPU_Score: int = 0
 round_counter: int = 0
+
+# Clearing console
+
+clear = lambda: os.system('cls')
 
 # Game starting
 
@@ -38,8 +43,8 @@ while True:
     # Suspence
     print('\n')
     for item in choices:
-        sleep(0.5)
         print(f'{item.title()}...')
+        sleep(0.5)
     print('Shoot!')
 
     # Display Player's choice and then CPU's
@@ -69,9 +74,10 @@ while True:
     # Asking the player if they want to play again
     again: str = input('Play again? (y/n)\n').lower()
 
+    clear()
+
     # If user input is not y the script will end
     if again != 'y':
         print('\nThanks for playing!')
+        sleep(2.5)
         break
-        
-
