@@ -2,14 +2,15 @@
 ### ROCK PAPER SCISSORS GAME ###
 
 # Imports
+import os
 import random
 from time import sleep
 
 # Declaring variables
 
-rockConditions: dict[str:int] = {'rock' : 1, 'scissors' : 0, 'paper' : 2}
-paperConditions: dict[str:int] = {'rock' : 0, 'scissors' : 2, 'paper' : 1}
-scissorConditions: dict[str:int] = {'rock' : 2, 'scissors' : 1, 'paper' : 0}
+rockConditions: dict[str:int] = {'rock' : 0, 'paper' : -1, 'scissors' : 1}
+paperConditions: dict[str:int] = {'rock' : 1, 'paper' : 0, 'scissors' : -1}
+scissorConditions: dict[str:int] = {'rock' : -1, 'paper' : 1, 'scissors' : 0}
 
 playerPath: dict[str:dict] = {'rock': rockConditions, 'paper': paperConditions, 'scissors': scissorConditions}
 
@@ -18,6 +19,10 @@ choices: list[str] = ['rock', 'paper', 'scissors']
 player_score: int = 0
 CPU_Score: int = 0
 round_counter: int = 0
+
+# Clearing console
+
+clear = lambda: os.system('cls')
 
 # Game starting
 
@@ -38,8 +43,8 @@ while True:
     # Suspence
     print('\n')
     for item in choices:
-        sleep(0.5)
         print(f'{item.title()}...')
+        sleep(0.5)
     print('Shoot!')
 
     # Display Player's choice and then CPU's
@@ -48,12 +53,12 @@ while True:
     # Whichever the player's choice is, their value will always be 1
     # The CPU's choice will access the same dictionary as the player's to compare choices
 
-    if playerPath[player_Choice][player_Choice] > playerPath[player_Choice][CPU_Choice]:
+    if playerPath[player_Choice][player_Choice] < playerPath[player_Choice][CPU_Choice]:
 
         print('You win!\n')
         player_score += 1
 
-    elif playerPath[player_Choice][player_Choice] < playerPath[player_Choice][CPU_Choice]:
+    elif playerPath[player_Choice][player_Choice] > playerPath[player_Choice][CPU_Choice]:
 
         print('You lose!\n')
         CPU_Score += 1
@@ -69,9 +74,10 @@ while True:
     # Asking the player if they want to play again
     again: str = input('Play again? (y/n)\n').lower()
 
+    clear()
+
     # If user input is not y the script will end
     if again != 'y':
         print('\nThanks for playing!')
+        sleep(2.5)
         break
-        
-
