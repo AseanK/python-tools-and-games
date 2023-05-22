@@ -1,9 +1,25 @@
 import random
+import os
+from sys import platform
 
+# Clears command line
+def clear():
+    if platform == "linux" or platform == "linux2":
+        # linux
+        os.system("clear")
+    elif platform == "darwin":
+        # OS X
+        os.system("clear")
+    elif platform == "win32":
+        # Windows...
+        os.system("CLS")
+
+# Global Val
 CARDS = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 balance = 0
 bet = 0
 
+# Gets player's deposit
 def deposit():
     while True:
         balance = input("How much would you like to deposit?  $")
@@ -17,6 +33,7 @@ def deposit():
             print(f"{balance} is not a number")
     return balance
 
+# Gets player's bet amount
 def get_bet():
     while True:
         amount = input("How much would you like to bet?  $")
@@ -32,12 +49,12 @@ def get_bet():
             print(f"{amount} is not a number")
     return amount
 
-
+# Draws card from the deck
 def deal_card():
     card = random.choice(CARDS)
     return card
 
-
+# Calculates total hand
 def calcScore(cards):
 
     if sum(cards) == 21 and len(cards) == 2:
@@ -47,6 +64,7 @@ def calcScore(cards):
         cards.append(1)
     return sum(cards)
 
+# Checks for winner
 def checkWinner(user_score, computer_score):
     if user_score > 21 and computer_score > 21:
         print("    You lose, you went over. 😤")
@@ -63,7 +81,7 @@ def checkWinner(user_score, computer_score):
         return balance + bet
     elif user_score > 21:
         print("    You lose, you went over 😭")
-        return balance + bet
+        return balance - bet
     elif computer_score > 21:
         print("    You win, dealer went over 😁")
         return balance + bet
@@ -107,16 +125,20 @@ def play_game():
     print(f"\n    Your final hand: {user_cards}, final score: {user_score}")
     print(f"    Computer's final hand: {computer_cards}, final score: {computer_score}")
     balance = checkWinner(user_score, computer_score)
-    print(balance)
-
-
     
 
+
+clear()
+balance = deposit()
 while True:
+    if balance <= 0:
+        print("\nYou've lost all of your money! 😭")
+        exit()
     play = input("Press enter to play ('q' to quit)")
+    clear()
     if play =="q":
         exit()
-    balance = deposit()
+    balance = balance
     print(f"Your current balance is ${balance}\n")
     bet = get_bet()
     play_game()
