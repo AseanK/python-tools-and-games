@@ -66,3 +66,8 @@ Don't forget to give the project a star! Thanks again!
 :rice_ball: Open a Pull Request
 
 
+## :raised_hands: Contributors
+
+<a href="https://github.com/AseanK/beginner-python-games/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AseanK/beginner-python-games" />
+</a>
