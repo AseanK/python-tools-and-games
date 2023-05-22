@@ -7,6 +7,23 @@
 
 <h1 align="center">Beginner python games</h1>
 
+<!-- Table of Contents -->
+<!-- Please update when you're contributing -->
+<div align="center">
+<details>
+    <summary><h2>Table of Contents</h2></summary>
+  <ol>
+    <li><a href="/auction">Auction</a></li>
+    <li><a href="/blackjack">BlackJack</a></li>
+    <li><a href="/board_filling_game">Board filling game</a></li>
+    <li><a href="/calculator">Calculator</a></li>
+    <li><a href="/encoding">Encoding</a></li>
+    <li><a href="/hangman">Hang Man</a></li>
+    <li><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
+  </ol>
+</details>
+</div>
+
 ## About The Project
 This is a beginner freindly **open source** project where developers build, play, or even learn various games built with Python!
 
