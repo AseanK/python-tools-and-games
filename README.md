@@ -26,19 +26,23 @@
 </details>
 </div>
 
-## About The Project
+## :eyes: About The Project
 This is a beginner freindly **open source** project where developers build, play, or even learn various games built with Python!
+<br /><br /><br />
 
-## Installation
+
+## :mushroom: Installation
 
 :rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-games.git`
 
 :rice_ball: Head to the game folder you want to play
 
 :rice_ball: Run the file using python command `python auction.py`
+<br /><br /><br />
 
 
-## Contribute
+
+## :sparkles: Contribute
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
