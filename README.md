@@ -20,6 +20,8 @@
     <li><a href="/encoding">Encoding</a></li>
     <li><a href="/hangman">Hang Man</a></li>
     <li><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
+    <li><a href="/guess_the_number">Guess the number</a></li>
+    <!-- <li><a href="/Name of your folder">Name of your game</a></li> -->
   </ol>
 </details>
 </div>
