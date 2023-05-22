@@ -14,7 +14,7 @@
     <summary><h2>Table of Contents</h2></summary>
   <ol>
     <li><a href="/auction">Auction</a></li>
-    <li><a href="/blackjack">BlackJack</a></li>
+    <li><a href="/black_jack">BlackJack</a></li>
     <li><a href="/board_filling_game">Board filling game</a></li>
     <li><a href="/calculator">Calculator</a></li>
     <li><a href="/encoding">Encoding</a></li>
