@@ -28,7 +28,7 @@
 </div>
 
 ## :eyes: About The Project
-This is a beginner freindly **open source** project where developers build, play, or even learn various games built with Python!
+This is a beginner friendly **open source** project where developers build, play, or even learn various games built with Python!
 <br /><br /><br />
 
 
