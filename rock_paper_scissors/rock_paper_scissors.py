@@ -7,9 +7,9 @@ from time import sleep
 
 # Declaring variables
 
-rockConditions: dict[str:int] = {'rock' : 1, 'scissors' : 0, 'paper' : 2}
-paperConditions: dict[str:int] = {'rock' : 0, 'scissors' : 2, 'paper' : 1}
-scissorConditions: dict[str:int] = {'rock' : 2, 'scissors' : 1, 'paper' : 0}
+rockConditions: dict[str:int] = {'rock' : 0, 'paper' : -1, 'scissors' : 1}
+paperConditions: dict[str:int] = {'rock' : 1, 'paper' : 0, 'scissors' : -1}
+scissorConditions: dict[str:int] = {'rock' : -1, 'paper' : 1, 'scissors' : 0}
 
 playerPath: dict[str:dict] = {'rock': rockConditions, 'paper': paperConditions, 'scissors': scissorConditions}
 
@@ -48,12 +48,12 @@ while True:
     # Whichever the player's choice is, their value will always be 1
     # The CPU's choice will access the same dictionary as the player's to compare choices
 
-    if playerPath[player_Choice][player_Choice] > playerPath[player_Choice][CPU_Choice]:
+    if playerPath[player_Choice][player_Choice] < playerPath[player_Choice][CPU_Choice]:
 
         print('You win!\n')
         player_score += 1
 
-    elif playerPath[player_Choice][player_Choice] < playerPath[player_Choice][CPU_Choice]:
+    elif playerPath[player_Choice][player_Choice] > playerPath[player_Choice][CPU_Choice]:
 
         print('You lose!\n')
         CPU_Score += 1
