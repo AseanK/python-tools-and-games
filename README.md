@@ -22,6 +22,7 @@
     <li><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
     <li><a href="/guess_the_number">Guess the number</a></li>
     <li><a href="/tic_tac_toe">Tic-Tac-Toe</a></li>
+    <li><a href="/slot_machine">Slot Machine</a></li>
     <!-- <li><a href="/Name of your folder">Name of your game</a></li> -->
   </ol>
 </details>
