@@ -24,6 +24,7 @@
       <li><p><a href="/tic_tac_toe">Tic-Tac-Toe</a></p></li>
       <li><p><a href="/slot_machine">Slot Machine</a></p></li>
       <li><p><a href="/minesweeper">Minesweeper</a></p>
+      <li><p><a href="/etch_a_sketch">Etch A Sketch</a></p></li>
       <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
    </h3>
   </ol.s>
