@@ -1,6 +1,7 @@
 import turtle
 import time
 import random
+import winsound
 from constants import *
 
 # Global variables
@@ -81,7 +82,12 @@ def move_snake():
 def has_collided_with_boundary():
     """Checks if the snake head has collided with the boundary."""
     x, y = snake_head.xcor(), snake_head.ycor()
-    return abs(x) > BOUNDARY_LIMIT - TURTLE_SIZE or abs(y) > BOUNDARY_LIMIT - TURTLE_SIZE
+    if abs(x) > BOUNDARY_LIMIT - TURTLE_SIZE or abs(y) > BOUNDARY_LIMIT - TURTLE_SIZE:
+        winsound.PlaySound('snake_game/die.wav', winsound.SND_ASYNC)
+        reset_game()
+        return True
+    return False
+
 
 
 def has_eaten_food():
@@ -109,6 +115,7 @@ def reset_game():
     """Resets the game when the snake hits the boundary or itself."""
     global current_score, game_delay, snake_body_segments
 
+    # Pause the game for a second
     time.sleep(1)
     snake_head.goto(0, 0)
     snake_head.direction = "stop"
@@ -128,6 +135,7 @@ def reset_game():
 
     # Update the score display
     update_score_display()
+
 
 def add_segment():
     """Adds a new segment to the snake."""
@@ -155,6 +163,9 @@ while True:
         # Add a segment
         add_segment()
 
+        # play the eat sound
+        winsound.PlaySound('snake_game/eat.wav', winsound.SND_ASYNC)
+        
         # Shorten the delay
         game_delay -= DELAY_DECREMENT
 
