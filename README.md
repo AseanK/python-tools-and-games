@@ -26,6 +26,7 @@
       <li><p><a href="/minesweeper">Minesweeper</a></p>
       <li><p><a href="/etch_a_sketch">Etch A Sketch</a></p></li>
       <li><p><a href="/snake_game">Snake game</a></p></li>
+      <li><p><a href="/turtle_racing_bet">Turtle racing bet</a></p></li>
       <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
    </h3>
   </ol.s>
