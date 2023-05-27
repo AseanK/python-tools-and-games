@@ -9,6 +9,8 @@ game_delay = INITIAL_DELAY
 current_score = 0
 high_score = 0
 snake_body_segments = []
+paused = False 
+previous_direction = "stop"
 
 # Screen setup
 game_screen = turtle.Screen()
@@ -146,38 +148,48 @@ def add_segment():
     new_segment.penup()
     snake_body_segments.append(new_segment)
 
+# Pause function
+def toggle_pause():
+    """Pause or unpause the game."""
+    global paused, previous_direction
+    paused = not paused
+    if paused:
+        # Store the previous direction and stop the snake
+        previous_direction = snake_head.direction
+        snake_head.direction = "stop"
+    else:
+        # Restore the previous direction
+        snake_head.direction = previous_direction
+
+game_screen.listen()
+for key, direction in DIRECTION_KEYS.items():
+    game_screen.onkeypress(lambda direction=direction: change_direction(direction), key)
+
+game_screen.onkeypress(toggle_pause, "p")  
+
+
 # Main game loop
 while True:
     game_screen.update()
 
-    if has_collided_with_boundary() or has_collided_with_body():
-        reset_game()
+    if not paused:  # only run game logic when not paused
+        if has_collided_with_boundary() or has_collided_with_body():
+            reset_game()
 
-    # In the game loop
-    if has_eaten_food():
-        # Move the food to a random spot
-        x = random.randint(-BOUNDARY_LIMIT + TURTLE_SIZE, BOUNDARY_LIMIT - TURTLE_SIZE)
-        y = random.randint(-BOUNDARY_LIMIT + TURTLE_SIZE, BOUNDARY_LIMIT - TURTLE_SIZE)
-        snake_food.goto(x, y)
+        if has_eaten_food():
+            x = random.randint(-BOUNDARY_LIMIT + TURTLE_SIZE, BOUNDARY_LIMIT - TURTLE_SIZE)
+            y = random.randint(-BOUNDARY_LIMIT + TURTLE_SIZE, BOUNDARY_LIMIT - TURTLE_SIZE)
+            snake_food.goto(x, y)
+            add_segment()
+            winsound.PlaySound('snake_game/eat.wav', winsound.SND_ASYNC)
+            game_delay -= DELAY_DECREMENT
+            current_score += SCORE_INCREMENT
+            if current_score > high_score:
+                high_score = current_score
+            update_score_display()
 
-        # Add a segment
-        add_segment()
-
-        # play the eat sound
-        winsound.PlaySound('snake_game/eat.wav', winsound.SND_ASYNC)
-        
-        # Shorten the delay
-        game_delay -= DELAY_DECREMENT
-
-        # Increase the score
-        current_score += SCORE_INCREMENT
-        if current_score > high_score:
-            high_score = current_score
-
-        update_score_display()
-
-    update_segments()
-    move_snake()
+        update_segments()
+        move_snake()
 
     time.sleep(game_delay)
 
