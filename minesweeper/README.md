@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Name of your game
+# Minesweeper
 <!-- Game Rules -->
 ## Rules
 1. Find every mine in the field and place flags on them
