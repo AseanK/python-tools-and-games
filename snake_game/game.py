@@ -207,8 +207,13 @@ def toggle_pause():
         # Restore the previous direction
         snake_head.direction = previous_direction
 
-game_screen.onkeypress(toggle_pause, "p")  
 
+game_screen.onkeypress(toggle_pause, "p")  
+game_screen.listen()
+for key, direction in DIRECTION_KEYS.items():
+    game_screen.onkeypress(lambda direction=direction: change_direction(direction), key)
+
+game_screen.onkeypress(toggle_pause, "p")  
 # Main game loop
 while True:
     game_screen.update()
@@ -223,6 +228,7 @@ while True:
             snake_food.goto(x, y)
             add_segment()
             eat_sound.play()
+            winsound.PlaySound('snake_game/eat.wav', winsound.SND_ASYNC)
             game_delay -= DELAY_DECREMENT
             current_score += SCORE_INCREMENT
             if current_score > high_score:
