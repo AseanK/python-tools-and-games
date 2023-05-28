@@ -2,6 +2,7 @@ import turtle
 import time
 import random
 import winsound
+import pygame
 from constants import *
 
 # Global variables
@@ -11,6 +12,14 @@ high_score = 0
 snake_body_segments = []
 paused = False 
 previous_direction = "stop"
+current_difficulty = "easy"
+
+
+
+pygame.mixer.init()  # Initialize the mixer module
+
+eat_sound = pygame.mixer.Sound('eat.wav')
+die_sound = pygame.mixer.Sound('die.wav')
 
 # Screen setup
 game_screen = turtle.Screen()
@@ -49,9 +58,45 @@ snake_head.direction = "stop"
 snake_food = create_turtle("circle", FOOD_COLOR, FOOD_INITIAL_POSITION)
 
 # Pen (for writing score)
-score_pen = create_turtle("square", "white", (0, SCREEN_HEIGHT/2 - 40))
+score_pen = create_turtle("square", "white", (0, SCREEN_HEIGHT/2 - 30))
 score_pen.hideturtle()
 score_pen.write("Score: 0  High Score: 0", align="center", font=SCORE_FONT)
+
+# Difficulty label
+difficulty_label = create_turtle("square", "white", (0, SCREEN_HEIGHT/2 - 60))
+difficulty_label.hideturtle()  # make it invisible for now
+difficulty_label.write("", align="center", font=SCORE_FONT)
+
+# Difficulty buttons
+easy_button = create_turtle("square", "white", (-100, 0))  # in the middle and slightly to the left
+easy_button.write("Easy", align="center", font=SCORE_FONT)
+
+hard_button = create_turtle("square", "white", (100, 0))  # in the middle and slightly to the right
+hard_button.write("Hard", align="center", font=SCORE_FONT)
+
+
+def toggle_difficulty(difficulty):
+    """Sets the game delay based on the specified difficulty."""
+    global game_delay, current_difficulty
+    game_delay = INITIAL_DELAY if difficulty == "easy" else HARD_DELAY
+    current_difficulty = difficulty  # Update the current difficulty
+    difficulty_label.clear()
+    difficulty_label.write(f"Difficulty: {difficulty.title()}", align="center", font=SCORE_FONT)
+
+
+def set_difficulty(difficulty):
+    """Sets the difficulty to the specified level."""
+    toggle_difficulty(difficulty)
+    easy_button.clear()  # clears the 'Easy' text
+    hard_button.clear()  # clears the 'Hard' text
+    easy_button.hideturtle()
+    hard_button.hideturtle()
+
+
+easy_button.onclick(lambda x, y: set_difficulty("easy"))
+hard_button.onclick(lambda x, y: set_difficulty("hard"))
+
+
 
 def update_score_display():
     """Updates the score on the screen."""
@@ -60,8 +105,11 @@ def update_score_display():
 
 def change_direction(new_direction):
     """Changes direction of the snake unless it's going in the opposite direction."""
-    if snake_head.direction != OPPOSITE_DIRECTIONS[new_direction]:
+    global previous_direction
+    if snake_head.direction == "stop" or new_direction != OPPOSITE_DIRECTIONS[snake_head.direction]:
+        previous_direction = snake_head.direction
         snake_head.direction = new_direction
+
 
 # Movement functions
 game_screen.listen()
@@ -85,12 +133,10 @@ def has_collided_with_boundary():
     """Checks if the snake head has collided with the boundary."""
     x, y = snake_head.xcor(), snake_head.ycor()
     if abs(x) > BOUNDARY_LIMIT - TURTLE_SIZE or abs(y) > BOUNDARY_LIMIT - TURTLE_SIZE:
-        winsound.PlaySound('snake_game/die.wav', winsound.SND_ASYNC)
+        die_sound.play()
         reset_game()
         return True
     return False
-
-
 
 def has_eaten_food():
     """Checks if the snake head has collided with the food."""
@@ -132,8 +178,8 @@ def reset_game():
     # Reset the score
     current_score = 0
 
-    # Reset the delay
-    game_delay = INITIAL_DELAY
+    # Reset the delay based on the current difficulty
+    toggle_difficulty(current_difficulty)  # Call the function here
 
     # Update the score display
     update_score_display()
@@ -161,12 +207,7 @@ def toggle_pause():
         # Restore the previous direction
         snake_head.direction = previous_direction
 
-game_screen.listen()
-for key, direction in DIRECTION_KEYS.items():
-    game_screen.onkeypress(lambda direction=direction: change_direction(direction), key)
-
 game_screen.onkeypress(toggle_pause, "p")  
-
 
 # Main game loop
 while True:
@@ -181,7 +222,7 @@ while True:
             y = random.randint(-BOUNDARY_LIMIT + TURTLE_SIZE, BOUNDARY_LIMIT - TURTLE_SIZE)
             snake_food.goto(x, y)
             add_segment()
-            winsound.PlaySound('snake_game/eat.wav', winsound.SND_ASYNC)
+            eat_sound.play()
             game_delay -= DELAY_DECREMENT
             current_score += SCORE_INCREMENT
             if current_score > high_score:
@@ -194,4 +235,3 @@ while True:
     time.sleep(game_delay)
 
 turtle.mainloop()
-
