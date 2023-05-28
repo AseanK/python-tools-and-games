@@ -15,7 +15,14 @@ def clear():
         os.system("CLS")
 
 # Global Val
-CARDS = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+n_decks = 6    #standard casino's number
+suit = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+def new_cards():
+    total = suit * 4 * n_decks
+
+    return total
+
 balance = 0
 bet = 0
 
@@ -49,20 +56,20 @@ def get_bet():
             print(f"{amount} is not a number")
     return amount
 
-# Draws card from the deck
+# Draws card from the cards
 def deal_card():
-    card = random.choice(CARDS)
+    card = random.choice(cards)
+    cards.remove(card)
     return card
 
 # Calculates total hand
-def calcScore(cards):
-
-    if sum(cards) == 21 and len(cards) == 2:
+def calcScore(hand):
+    if sum(hand) == 21 and len(hand) == 2:
         return 0
-    if 11 in cards and sum(cards) > 21:
-        cards.remove(11)
-        cards.append(1)
-    return sum(cards)
+    if 11 in hand and sum(hand) > 21:
+        hand.remove(11)
+        hand.append(1)
+    return sum(hand)
 
 # Checks for winner
 def checkWinner(user_score, computer_score):
@@ -78,7 +85,7 @@ def checkWinner(user_score, computer_score):
         return balance - bet
     elif user_score == 0:
         print("    You Win with a Blackjack 😎")
-        return balance + bet
+        return balance + int(bet * 1.5)
     elif user_score > 21:
         print("    You lose, you went over 😭")
         return balance - bet
@@ -93,16 +100,22 @@ def checkWinner(user_score, computer_score):
         return balance - bet
 
 def play_game():
-    global balance
+    global balance   
+    global cards
     user_cards = []
     computer_cards = []
     is_game_over = False
-    
+    if not cards:
+        cards = new_cards()
+
+
+
+
     for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
     
-    
+  
     while not is_game_over:
         user_score = calcScore(user_cards)
         computer_score = calcScore(computer_cards)
@@ -130,15 +143,22 @@ def play_game():
 
 clear()
 balance = deposit()
+cards = new_cards()
 while True:
     if balance <= 0:
         print("\nYou've lost all of your money! 😭")
-        exit()
+        input()
+        quit()
     play = input("Press enter to play ('q' to quit)")
     clear()
     if play =="q":
         exit()
     balance = balance
+
+    if len(cards) < 300:
+        print("Time to shuffle the cards!")
+        cards = new_cards()
+
     print(f"Your current balance is ${balance}\n")
     bet = get_bet()
     play_game()

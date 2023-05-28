@@ -1,36 +1,42 @@
-```
-.----..-.  .-..---. .-. .-. .----. .-. .-.    .---.   .--.  .-.   .-..----. .----.
-| {}  }\ \/ /{_   _}| {_} |/  {}  \|  `| |   /   __} / {} \ |  `.'  || {_  { {__  
-| .--'  }  {   | |  | { } |\      /| |\  |   \  {_ }/  /\  \| |\ /| || {__ .-._} }
-`-'     `--'   `-'  `-' `-' `----' `-' `-'    `---' `-'  `-'`-' ` `-'`----'`----' 
-```
+<p align="center">
+  <a href="https://github.com/AseanK/beginner-python-games" target="_blank">
+    <img src="images/logo.png" width = "2560px" height = "200px">
+  </a>
+</p>
 
 <h1 align="center">Beginner python games</h1>
-
+<br /><br />
 <!-- Table of Contents -->
 <!-- Please update when you're contributing -->
 <div align="center">
 <details>
     <summary><h2>Table of Contents</h2></summary>
-  <ol>
-    <li><a href="/auction">Auction</a></li>
-    <li><a href="/black_jack">BlackJack</a></li>
-    <li><a href="/board_filling_game">Board filling game</a></li>
-    <li><a href="/calculator">Calculator</a></li>
-    <li><a href="/encoding">Encoding</a></li>
-    <li><a href="/hangman">Hang Man</a></li>
-    <li><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
-    <li><a href="/guess_the_number">Guess the number</a></li>
-    <li><a href="/tic_tac_toe">Tic-Tac-Toe</a></li>
-    <li><a href="/slot_machine">Slot Machine</a></li>
-    <!-- <li><a href="/Name of your folder">Name of your game</a></li> -->
-  </ol>
+  <ol.s>
+    <h3>
+      <li><p><a href="/auction">Auction</a></p></li>
+      <li><p><a href="/black_jack">BlackJack</a></p></li>
+      <li><p><a href="/board_filling_game">Board filling game</a></p></li>
+      <li><p><a href="/calculator">Calculator</a></p></li>
+      <li><p><a href="/encoding">Encoding</a></p></li>
+      <li><p><a href="/hangman">Hang Man</a></p></li>
+      <li><p><a href="/rock_paper_scissors">Rock Paper Scissor</a></p></li>
+      <li><p><a href="/guess_the_number">Guess the number</a></p></li>
+      <li><p><a href="/tic_tac_toe">Tic-Tac-Toe</a></p></li>
+      <li><p><a href="/slot_machine">Slot Machine</a></p></li>
+      <li><p><a href="/minesweeper">Minesweeper</a></p>
+      <li><p><a href="/etch_a_sketch">Etch A Sketch</a></p></li>
+      <li><p><a href="/snake_game">Snake game</a></p></li>
+      <li><p><a href="/turtle_racing_bet">Turtle racing bet</a></p></li>
+      <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
+   </h3>
+  </ol.s>
 </details>
 </div>
+<br /><br />
 
 ## :eyes: About The Project
 This is a beginner friendly **open source** project where developers build, play, or even learn various games built with Python!
-<br /><br /><br />
+<br /><br />
 
 
 ## :mushroom: Installation
@@ -72,3 +78,6 @@ Don't forget to give the project a star! Thanks again!
 <a href="https://github.com/AseanK/beginner-python-games/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=AseanK/beginner-python-games" />
 </a>
+
+
+### 🙏 Thank you! 
