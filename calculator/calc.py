@@ -71,15 +71,18 @@ def calculate(op:str, i:int, j:int) -> int:
     return result
 
 
-def get_op_left_num(equation:str, op_index:int) -> int:
-    """Retrieves the numbers on an operators left side"""
+def get_initial_op_left_num(equation:str, op_index:int) -> int:
+    """Retrieves the numbers on an operators left side. This func is only called for the first operator in an equation"""
     digits = []
+    
     for char in equation[op_index-1::-1]:
         if not is_operator(char):
             digits.append(char)
         else:
             break
-    return int("".join(digits))
+
+    num = int("".join(digits))
+    return -(num) if begins_with_negative(equation) else num
 
 def get_op_right_num(equation:str, op_index:int) -> int:
     """Retrieves the numbers on an operators right side"""
@@ -94,18 +97,13 @@ def get_op_right_num(equation:str, op_index:int) -> int:
 def parse_equation(equation:str, equation_ops:List[int]):
     """Function is a bit messy"""
     result = None
-    if begins_with_negative(equation):
-        initial_negative = equation[0]
-        del equation[0]
-    else:
-        initial_negative = None
     
     for i in equation_ops:
         current_op = equation[i]
-        left_num = get_op_left_num(equation, i) if result is None else result
+        left_num = get_initial_op_left_num(equation, i) if result is None else result
         right_num = get_op_right_num(equation, i)
         result = calculate(current_op, left_num, right_num)
-        
+    
     return result
         
 def locate_operators(equation:str) -> List[int]:
@@ -137,7 +135,7 @@ def main():
                 try:
                     print(parse_equation(equation, equation_ops))
                 except ZeroDivisionError:
-                    print("Your equation resulted in a ZerODivisonError. Try again.")
+                    print("Your equation resulted in a ZeroDivisonError. Try again.")
     
     
     
