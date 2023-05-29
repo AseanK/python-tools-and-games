@@ -10,10 +10,12 @@ class Paddle(Turtle):
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.setpos(position, 0)
 
+    # Move paddle up
     def up(self):
         new_y = self.ycor() + 20
         self.sety(new_y)
 
+    # Move paddle down
     def down(self):
         new_y = self.ycor() - 20
         self.sety(new_y)

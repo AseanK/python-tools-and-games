@@ -11,6 +11,7 @@ class score(Turtle):
         self.right_score = 0
         self.update()
 
+    # Updates scoreboard
     def update(self):
         self.clear()
         self.setpos(-150, 200)
@@ -19,11 +20,12 @@ class score(Turtle):
         self.setpos(150, 200)
         self.write(f"Score: {self.right_score}", align="center", font=('Arial', 18, 'normal'))
 
-
+    # Add score to left scoreboard
     def left_point(self):
         self.left_score += 1
         self.update()
 
+    # Add score to right scoreboard
     def right_point(self):
         self.right_score += 1
         self.update()
