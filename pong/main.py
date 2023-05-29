@@ -2,6 +2,10 @@ from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 from time import sleep
+from score import score
+from random import choice
+
+SPEEDS = [.08, .07, .06, .05, .04, .03, .02, .01]
 
 screen = Screen()
 
@@ -15,19 +19,38 @@ screen.listen()
 l_paddle = Paddle(-350)
 r_paddle = Paddle(350)
 ball = Ball()
+scoreboard = score()
 
 screen.onkeypress(r_paddle.up, "Up")
 screen.onkeypress(r_paddle.down, "Down")
-
 screen.onkeypress(l_paddle.up, "w")
 screen.onkeypress(l_paddle.down, "s")
 
 game_on = True
+speed = 0.07
 while game_on:
-    sleep(.1)
+    sleep(speed)
     ball.move()
     screen.update()
 
+    if ball.ycor() > 280 or ball.ycor() < -270:
+        ball.bounce_wall()
+
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+        ball.bounce_paddle()
+        speed = choice(SPEEDS)
+
+    if ball.xcor() > 360:
+        scoreboard.left_point()
+        ball.reset()
+        ball.bounce_paddle()
+        speed = 0.07
+    
+    if ball.xcor() < -360:
+        scoreboard.right_point()
+        ball.reset()
+        ball.bounce_paddle()
+        speed = 0.07
 
 
 
