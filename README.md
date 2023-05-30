@@ -28,6 +28,7 @@
       <li><p><a href="/snake_game">Snake game</a></p></li>
       <li><p><a href="/turtle_racing_bet">Turtle racing bet</a></p></li>
       <li><p><a href="/pong">Pong</a></p></li>
+      <li><p><a href="/road_crossing">Road crossing</a></p></li>
       <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
    </h3>
   </ol.s>
