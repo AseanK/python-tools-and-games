@@ -4,7 +4,7 @@ from display import Display
 
 # Turtle window
 screen = turtle.Screen()
-screen.bgpic("./states_guessing/blank_states_img.gif")
+screen.bgpic("./state_guessing/blank_states_img.gif")
 screen.setup(725, 491)
 screen.title("Guess The States")
 
