@@ -7,7 +7,8 @@
 # Name of your game
 <!-- Game Rules -->
 ## Rules
-1. Guess all 50 US states
+1. Do you know all 50 states of US? Play this game and find out!
+2. Guess all 50 states of US
 
 ## How to play
 1. Fork the repo by clicking the fork logo on the top right <img src="../images/fork.png" width="300" height="60">
