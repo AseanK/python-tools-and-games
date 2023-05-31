@@ -9,7 +9,7 @@ screen.setup(725, 491)
 screen.title("Guess The States")
 
 # Read .csv data using pandas and put all states in a set
-data = pandas.read_csv("./states_guessing/50_states.csv")
+data = pandas.read_csv("./state_guessing/50_states.csv")
 states = set(data["state"])
 # Displays states in the map
 display = Display()
