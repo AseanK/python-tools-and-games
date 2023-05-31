@@ -1,82 +1,51 @@
-
-### ROCK PAPER SCISSORS GAME ###
-
-# Imports
 import os
 import random
 from time import sleep
 
-# Declaring variables
+choices = ['rock', 'paper', 'scissors']
 
-rockConditions: dict[str:int] = {'rock' : 0, 'paper' : -1, 'scissors' : 1}
-paperConditions: dict[str:int] = {'rock' : 1, 'paper' : 0, 'scissors' : -1}
-scissorConditions: dict[str:int] = {'rock' : -1, 'paper' : 1, 'scissors' : 0}
-
-playerPath: dict[str:dict] = {'rock': rockConditions, 'paper': paperConditions, 'scissors': scissorConditions}
-
-choices: list[str] = ['rock', 'paper', 'scissors']
-
-player_score: int = 0
-CPU_Score: int = 0
-round_counter: int = 0
-
-# Clearing console
+player_score = 0
+cpu_score = 0
+round_counter = 0
 
 clear = lambda: os.system('cls')
 
-# Game starting
-
 print('Welcome to Rock Paper Scissors!')
 
-# Game loop
 while True:
+    cpu_choice = random.choice(choices)
 
-    CPU_Choice: str = random.choice(choices)
+    player_choice = input('Rock, Paper, or Scissors?\n').lower()
 
-    player_Choice: str = input('Rock, Paper, or Scissors?\n').lower()
-
-    # Loop will restart if player has an invalid choice
-    if player_Choice not in choices:
-        print("You didn't pick any options!\n")
+    if player_choice not in choices:
+        print("Invalid choice. Please pick from 'rock', 'paper', or 'scissors'.\n")
         continue
-    
-    # Suspence
+
     print('\n')
     for item in choices:
         print(f'{item.title()}...')
         sleep(0.5)
     print('Shoot!')
 
-    # Display Player's choice and then CPU's
-    print(f'\nPlayer: {player_Choice}\nCPU: {CPU_Choice}\n')
+    print(f'\nPlayer: {player_choice}\nCPU: {cpu_choice}\n')
 
-    # Whichever the player's choice is, their value will always be 1
-    # The CPU's choice will access the same dictionary as the player's to compare choices
-
-    if playerPath[player_Choice][player_Choice] < playerPath[player_Choice][CPU_Choice]:
-
+    if player_choice == cpu_choice:
+        print("It's a tie!\n")
+    elif (choices.index(player_choice) - choices.index(cpu_choice)) % 3 == 1:
         print('You win!\n')
         player_score += 1
-
-    elif playerPath[player_Choice][player_Choice] > playerPath[player_Choice][CPU_Choice]:
-
-        print('You lose!\n')
-        CPU_Score += 1
-
     else:
-        print("It's a tie!\n")
-    
+        print('You lose!\n')
+        cpu_score += 1
+
     round_counter += 1
 
-    # Displaying the player score, CPU score, and how many rounds have been played
-    print(f'Player Score: {player_score}\nCPU Score: {CPU_Score}\nRounds: {round_counter}\n')
-    
-    # Asking the player if they want to play again
-    again: str = input('Play again? (y/n)\n').lower()
+    print(f'Player Score: {player_score}\nCPU Score: {cpu_score}\nRounds: {round_counter}\n')
+
+    again = input('Play again? (y/n)\n').lower()
 
     clear()
 
-    # If user input is not y the script will end
     if again != 'y':
         print('\nThanks for playing!')
         sleep(2.5)
