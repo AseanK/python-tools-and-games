@@ -1,5 +1,20 @@
 import pandas
 import re
+import os
+from sys import platform
+
+# Clears command line
+def clear():
+    if platform == "linux" or platform == "linux2":
+        # linux
+        os.system("clear")
+    elif platform == "darwin":
+        # OS X
+        os.system("clear")
+    elif platform == "win32":
+        # Windows...
+        os.system("CLS")
+
 
 nato = pandas.read_csv("./nato_phonetic_alphabet.csv")
 
@@ -16,6 +31,7 @@ def intro():
     if inp == "q":
         exit()
 
+clear()
 intro()
 
 while True:
