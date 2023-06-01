@@ -54,6 +54,9 @@ def intro():
     print("\nValid input format:")
     print("ROW SPACE COLUMN   [3 H], [1 F]    : dig")
     print("  Followed by F    [3 H F], [1 F F]: flag\n")
+    inp = input("Press enter to start 'q' to quit")
+    if inp == "q":
+        exit()
 
 
 # Grid layout
@@ -215,15 +218,11 @@ game_over = False
 
 plant_mines()
 cell_value()
-
+intro()
 
 # Main
 while not game_over:
-    intro()
 
-    inp = input("Press enter to start 'q' to quit")
-    if inp == "q":
-        exit()
     clear()
 
     layout()

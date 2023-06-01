@@ -2,7 +2,7 @@ from turtle import Turtle
 import pandas
 
 # Read .csv data using pandas
-data = pandas.read_csv("./state_guessing/50_states.csv", index_col=False)
+data = pandas.read_csv("./50_states.csv", index_col=False)
 
 
 class Display(Turtle):

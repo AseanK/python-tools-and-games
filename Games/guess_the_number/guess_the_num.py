@@ -89,7 +89,7 @@ def main():
             
             for i in range(5, 0, -1):
                 sleep(1)
-                print(f"Restarting the game in {i} seconds...")
+                print(f"Restarting the game in {i} seconds...", end="\r")
             clear()
             main()
 
@@ -103,10 +103,10 @@ def main():
                 print("Congrats! you win the game!")
                 break
             elif guess > ans:
-                print(f"\nHigher than {guess}\n")
+                print(f"\nLower than {guess}\n")
                 print(f"Remaining guess: {lives}")
             else:
-                print(f"\nLower than {guess}\n")
+                print(f"\nHigher than {guess}\n")
                 print(f"Remaining guess: {lives}")
 
         if lives == 0:
@@ -114,7 +114,7 @@ def main():
 
         for i in range(5, 0, -1):
             sleep(1)
-            print(f"Restarting the game in {i} seconds...")
+            print(f"Restarting the game in {i} seconds...", end="\r")
         clear()
         main()
 
