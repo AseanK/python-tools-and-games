@@ -16,7 +16,7 @@
         >\>\>\> 5 + 4 + 99 - 33 * 4
 - Parenthesis are not yet included (this requires _a lot_ of more work to validate. I encourage anyone to try though. You'll have to use a more advanced algorithm).
 
-## How to play
+## How to install and run
 
 1. Fork the repo by clicking the fork logo on top right <img src="../../images/fork.png" width="300" height="60">
 2. Clone the repo `git clone git@github.com:AseanK/beginner-python-games.git`

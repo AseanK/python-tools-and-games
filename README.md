@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/AseanK/beginner-python-games" target="_blank">
-    <img src="images/logo.png" width = "2560px" height = "200px">
+    <img src="images/main_logo.png" width = "2560px" height = "200px">
   </a>
 </p>
 

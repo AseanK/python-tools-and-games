@@ -4,14 +4,17 @@
   </a>
 </p>
 
-# NATO Alphabet Translator
+# Name of your tool
 <!-- Game Rules -->
 ## Features
-1. This program converts the normal alphabet into the NATO phonetic alphabet which is commonly used by militaries and other organisations that communicate via radio
-2. Enter a word and it'll do the rest for you!
+1. 
+2. 
+3. 
 
 ## How to install and run
 1. Fork the repo by clicking the fork logo on the top right <img src="../../images/fork.png" width="300" height="60">
 2. Clone the repo `git clone git@github.com:AseanK/beginner-python-games.git`
-3. Head to the NATO_alphabet_translator folder
-4. Run the file using python command `python translator.py`
+3. Head to the <!-- name of the folder --> folder
+4. Run the file using python command `python <!-- name of the file -->`
+
+<!-- You're welcome to add more things if you want -->
