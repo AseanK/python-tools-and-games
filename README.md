@@ -67,7 +67,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 :rice_ball: Fork the Project
-    <img src="/images/fork.png" width="300" height="60">
+    <img src="/images/fork.png" width="120" height="27">
     
 :rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-tools-and-games.git`
 
