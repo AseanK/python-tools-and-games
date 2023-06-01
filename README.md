@@ -30,6 +30,7 @@
       <li><p><a href="/pong">Pong</a></p></li>
       <li><p><a href="/road_crossing">Road crossing</a></p></li>
       <li><p><a href="/state_guessing">US states guessing</a></p></li>
+      <li><p><a href="/NATO_alphabet_translator">NATO Alphabet Translator</a></p></li>
       <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
    </h3>
   </ol.s>
