@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/AseanK/beginner-python-games" target="_blank">
+  <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
     <img src="images/main_logo.png" width = "2560px" height = "200px">
   </a>
 </p>
@@ -48,7 +48,7 @@ This is a beginner friendly **open source** project where developers build, play
 
 ## :mushroom: Installation
 
-:rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-games.git`
+:rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-tools-and-games.git`
 
 :rice_ball: Head to the game folder you want to play
 
@@ -69,7 +69,7 @@ Don't forget to give the project a star! Thanks again!
 :rice_ball: Fork the Project
     <img src="/images/fork.png" width="300" height="60">
     
-:rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-games.git`
+:rice_ball: Clone the repo `git clone git@github.com:AseanK/beginner-python-tools-and-games.git`
 
 :rice_ball: Create your own Branch (`git checkout -b Name_of_your_game`)
 
@@ -82,8 +82,8 @@ Don't forget to give the project a star! Thanks again!
 
 ## :raised_hands: Contributors
 
-<a href="https://github.com/AseanK/beginner-python-games/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AseanK/beginner-python-games" />
+<a href="https://github.com/AseanK/beginner-python-tools-and-games/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AseanK/beginner-python-tools-and-games" />
 </a>
 
 
