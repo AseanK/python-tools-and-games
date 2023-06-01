@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Beginner python games</h1>
+<h1 align="center">Beginner python tools and games</h1>
 <br /><br />
 <!-- Table of Contents -->
 <!-- Please update when you're contributing -->
@@ -42,7 +42,7 @@
 <br /><br />
 
 ## :eyes: About The Project
-This is a beginner friendly **open source** project where developers build, play, or even learn various games built with Python!
+This is a beginner friendly **open source** project where developers build, play, or even learn various games and tools built with Python!
 <br /><br />
 
 
@@ -52,7 +52,7 @@ This is a beginner friendly **open source** project where developers build, play
 
 :rice_ball: Head to the game folder you want to play
 
-:rice_ball: Run the file using python command `python auction.py`
+:rice_ball: Run the file using python command `python name_of_the_game/tool.py`
 <br /><br /><br />
 
 
