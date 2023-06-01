@@ -8,30 +8,33 @@
 <br /><br />
 <!-- Table of Contents -->
 <!-- Please update when you're contributing -->
+
+<!-- <li><a href="/Name of your folder">Name of your game</a></li> -->
+
 <div align="center">
 <details>
     <summary><h2>Table of Contents</h2></summary>
   <ol.s>
-    <h3>
-      <li><p><a href="/auction">Auction</a></p></li>
-      <li><p><a href="/black_jack">BlackJack</a></p></li>
-      <li><p><a href="/board_filling_game">Board filling game</a></p></li>
-      <li><p><a href="/calculator">Calculator</a></p></li>
-      <li><p><a href="/encoding">Encoding</a></p></li>
-      <li><p><a href="/hangman">Hang Man</a></p></li>
-      <li><p><a href="/rock_paper_scissors">Rock Paper Scissor</a></p></li>
-      <li><p><a href="/guess_the_number">Guess the number</a></p></li>
-      <li><p><a href="/tic_tac_toe">Tic-Tac-Toe</a></p></li>
-      <li><p><a href="/slot_machine">Slot Machine</a></p></li>
-      <li><p><a href="/minesweeper">Minesweeper</a></p>
-      <li><p><a href="/etch_a_sketch">Etch A Sketch</a></p></li>
-      <li><p><a href="/snake_game">Snake game</a></p></li>
-      <li><p><a href="/turtle_racing_bet">Turtle racing bet</a></p></li>
-      <li><p><a href="/pong">Pong</a></p></li>
-      <li><p><a href="/road_crossing">Road crossing</a></p></li>
-      <li><p><a href="/state_guessing">US states guessing</a></p></li>
-      <li><p><a href="/NATO_alphabet_translator">NATO Alphabet Translator</a></p></li>
-      <!-- <li><p><a href="/Name of your folder">Name of your game</a></p></li> -->
+    <h3>Games</h3>
+      <li><a href="/Games/auction">Auction</a></li>
+      <li><a href="/Games/black_jack">BlackJack</a></li>
+      <li><a href="/Games/slot_machine">Slot Machine</a></li>
+      <li><a href="/Games/board_filling_game">Board filling game</a></li>
+      <li><a href="/Games/state_guessing">US states guessing</a></li>
+      <li><a href="/Games/minesweeper">Minesweeper</a></li>
+      <li><a href="/Games/hangman">Hang Man</a></li>
+      <li><a href="/Games/rock_paper_scissors">Rock Paper Scissor</a></li>
+      <li><a href="/Games/guess_the_number">Guess the number</a></li>
+      <li><a href="/Games/tic_tac_toe">Tic-Tac-Toe</a></li>
+      <li><a href="/Games/road_crossing">Road crossing</a></li>
+      <li><a href="/Games/pong">Pong</a></li>
+      <li><a href="/Games/turtle_racing_bet">Turtle racing bet</a></li>
+      <li><a href="/Games/snake_game">Snake game</a></li>
+      <li><a href="/Games/etch_a_sketch">Etch A Sketch</a></li>
+    <h3>Tools</h3>
+      <li><a href="/Tools/encoding">Encoding</a></li>
+      <li><a href="/Tools/calculator">Calculator</a></li>
+      <li><a href="/Tools/NATO_alphabet_translator">NATO Alphabet Translator</a></li>
    </h3>
   </ol.s>
 </details>
