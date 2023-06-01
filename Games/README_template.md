@@ -17,4 +17,4 @@
 3. Head to the <!-- name of the folder --> folder
 4. Run the file using python command `python <!-- name of the file -->`
 
-<!-- You're welcome to add more things if you want -->
+<!-- You're welcome to add more things if you want eg. restriction, features, etc.-->
