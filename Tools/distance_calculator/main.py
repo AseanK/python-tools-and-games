@@ -33,7 +33,7 @@ def miles_to_yd():
     result_yd.config(text=f"{yd} yd")
 
 
-start_label = tk.Label(text="Enter length in mile")
+start_label = tk.Label(text="Enter distance in mile")
 start_label.grid(row=0, column=2)
 start_label.config(pady=15, font=("Arial", 12), background="dark gray")
 
