@@ -37,6 +37,7 @@
       <li><a href="/Tools/calculator">Calculator</a></li>
       <li><a href="/Tools/NATO_alphabet_translator">NATO Alphabet Translator</a></li>
       <li><a href="/Tools/distance_calculator">Distance Conversion Calculator</a></li>
+      <li><a href="/Tools/pomodoro_timer">Pomodoro Timer</a></li>
    </h3>
   </ol.s>
 </details>
