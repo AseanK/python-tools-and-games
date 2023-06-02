@@ -5,7 +5,7 @@
 </p>
 
 # Name of your tool
-<!-- Game Rules -->
+<!-- Tools features -->
 ## Features
 1. 
 2. 
