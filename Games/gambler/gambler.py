@@ -44,7 +44,7 @@ def main():
                 print("YES!YES!YES!")
                 balance+=bet
             else:
-                print(':/')
+                print('Wrong cup!')
                 balance-=bet
             time.sleep(0.4)
         else:
