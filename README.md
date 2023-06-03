@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
-    <img src="images/main_logo.png" width = "2560px" height = "200px">
+    <img src="images/main_logo.jpg" width = "2560px" height = "200px">
   </a>
 </p>
 
