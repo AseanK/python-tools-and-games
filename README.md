@@ -1,6 +1,29 @@
 <h1 align="center">Beginner python tools and games</h1>
 <br /><br />
 
+<!----------------Badge-------------->
+<div align="center">
+  
+![GitHub contributors](https://img.shields.io/github/contributors/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
+![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/AseanK/beginner-python-tools-and-games?style=flate&color=fb07c8)
+![GitHub issues](https://img.shields.io/github/issues-raw/AseanK/beginner-python-tools-and-games?style=flate&color=aqua)
+![GitHub last commit](https://img.shields.io/github/last-commit/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
+![GitHub Maintained](https://img.shields.io/badge/maintained-yes-fb07c8.svg?style=flat)
+![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/beginner-python-tools-and-games?style=flat&color=aqua)
+
+<img src="https://img.shields.io/badge/Contribute welcome-blueviolet.svg?style=for-the-badge" alt="PRs Welcome" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
+<img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
+<img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
+  
+</div>
+<div align="right">
+  
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
+  
+</div>
+  
+<!----------------Badge END-------------->
+  
 <p align="center">
   <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
     <img src="images/mainLogo.jpg" width = "720px" height = "310px">
