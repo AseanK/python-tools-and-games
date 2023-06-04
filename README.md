@@ -11,9 +11,9 @@
 ![GitHub Maintained](https://img.shields.io/badge/maintained-yes-fb07c8.svg?style=flat)
 ![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/beginner-python-tools-and-games?style=flat&color=aqua)
 
-<img src="https://img.shields.io/badge/Contribute welcome-blueviolet.svg?style=for-the-badge" alt="PRs Welcome" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
-<img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
-<img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
+<img src="https://img.shields.io/badge/Contribute welcome-blueviolet.svg?style=for-the-badge" alt="PRs Welcome" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
+<img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
+<img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
   
 </div>
 <div align="right">
