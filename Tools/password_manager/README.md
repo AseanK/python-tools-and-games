@@ -8,8 +8,9 @@
 <!-- Tools features -->
 ## Features
 1. Password Manager generates random strong password for you
-2. The saved data is stored locally in `txt` file
+2. The saved data is stored locally in `json` file
 3. Displays saved websites on the right
+4. Fetch selected data and displays on pop-up
 
 ## Screenshot
 <img src="../password_manager/Screenshot.png">

@@ -1,21 +1,34 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
+import json
 
 # Global val
 CHARCOAL = "#303437"
 RED = "#d73e3e"
 
 
-# Fetch data from data.txt and display saved websites
-def get_saved():
-    with open("data.txt") as data:
-        web = data.readlines()
-    
-    for i in web:
-        result = i.split(" | ")[1]
-        web_list.insert(tk.END, f"{result}\n", "tag-center")
+def display():
+    try:
+        with open("data.json") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        pass
+    else:
+        for web in data:
+            web_list.insert(tk.END, f"{web}")
+            
 
+
+# Shows email/password for selected website
+def get_saved():
+    cur = web_list.get(web_list.curselection())
+    
+    with open("data.json") as data_file:
+        data = json.load(data_file)
+        email = data[cur]["email"]
+        password = data[cur]["password"]
+        messagebox.showinfo(title=cur, message=f"Email: {email}\nPassword: {password}")
 
 # Generate random password
 def generate():
@@ -35,19 +48,35 @@ def generate():
     password_entry.insert(0, password)
 
 
-# Save user's input data to data.txt
+# Save user's input data to data.json
 def save():
     website = web_entry.get()
     email = email_entry.get()
     password = password_entry.get()
 
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
+
     if website != "" and email != "" and password != "":
-        with open("data.txt", mode="a") as data:
-            data.write(f"{website} | {email} | {password} \n")
+        try:
+            with open("data.json", mode="r") as data_file:
+                data = json.load(data_file)
+        except FileNotFoundError:
+            with open("data.json", mode="w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        else:
+            data.update(new_data)
+            with open("data.json", mode="w") as data_file:
+                json.dump(data, data_file, indent=4)
+        
         web_entry.delete(0, "end")
         email_entry.delete(0, "end")
         password_entry.delete(0, "end")
-        web_list.insert(tk.END, f"{website}\n", "tag-center")
+        web_list.insert(tk.END, f"{website}")
         messagebox.showinfo(title="Success", message="Successfully saved")
     else:
         messagebox.showerror(title="Failed", message="Please fill out the boxes")
@@ -84,16 +113,19 @@ gen_btn.config(bg=RED, activebackground=RED)
 add_btn = tk.Button(text="Add", command=save)
 add_btn.config(bg=RED, activebackground=RED)
 
-web_list = tk.Text(
-    width=22,
+get_btn = tk.Button(text="Get", command=get_saved)
+get_btn.config(bg=RED, activebackground=RED)
+
+web_list = tk.Listbox(
+    width=24,
     height=18,
     bg=CHARCOAL,
     fg="white",
-    highlightthickness=0
+    highlightthickness=0,
+    selectbackground=RED,
+    selectforeground="black"
 )
-web_list.tag_configure('tag-center', justify='center')
-web_list.bind("<Key>", lambda e: "break")
-get_saved()
+display()
 
 # GUI Grid
 canvas.grid(column=1, row=0)
@@ -106,5 +138,6 @@ password_entry.grid(column=1, row=3, sticky="W")
 gen_btn.grid(column=1,row=3, padx= 175)
 add_btn.grid(column=1, row=4, ipadx=100, sticky="W")
 web_list.grid(column=1, row=0, rowspan=5, sticky="E")
+get_btn.grid(column=2, row=4, sticky="N")
 
 window.mainloop()
