@@ -68,6 +68,7 @@
 - [Distance Conversion Calculator](/Tools/distance_calculator)
 - [Pomodoro Timer](/Tools/pomodoro_timer)
 - [Password Manager](/Tools/password_manager)
+- [Kanye Says...](/Tools/kanye_says)
 
 </details>
 
