@@ -2,26 +2,14 @@
 <br /><br />
 
 <!----------------Badge-------------->
+
 <div align="center">
-  
-![GitHub contributors](https://img.shields.io/github/contributors/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
-![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/AseanK/beginner-python-tools-and-games?style=flate&color=fb07c8)
-![GitHub issues](https://img.shields.io/github/issues-raw/AseanK/beginner-python-tools-and-games?style=flate&color=aqua)
-![GitHub last commit](https://img.shields.io/github/last-commit/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
-![GitHub Maintained](https://img.shields.io/badge/maintained-yes-fb07c8.svg?style=flat)
-![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/beginner-python-tools-and-games?style=flat&color=aqua)
 
 <img src="https://img.shields.io/badge/Contribution welcome-blueviolet.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
 <img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
 <img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
   
 </div>
-<div align="right">
-  
-[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
-  
-</div>
-  
 <!----------------Badge END-------------->
   
 <p align="center">
@@ -30,118 +18,140 @@
   </a>
 </p>
 
-<!-- Table of Contents -->
-<!-- Please update when you're contributing -->
-
-<!-- <li><a href="/Name of your folder">Name of your game</a></li> -->
-
+  <!----------------Badge-------------->
 <div align="center">
-<details>
-    <summary><h2>Table of Contents</h2></summary>
-  <ol.s>
-    <h3>Games</h3>
-      <li><a href="/Games/auction">Auction</a></li>
-      <li><a href="/Games/black_jack">BlackJack</a></li>
-      <li><a href="/Games/slot_machine">Slot Machine</a></li>
-      <li><a href="/Games/board_filling_game">Board filling game</a></li>
-      <li><a href="/Games/state_guessing">US states guessing</a></li>
-      <li><a href="/Games/minesweeper">Minesweeper</a></li>
-      <li><a href="/Games/hangman">Hang Man</a></li>
-      <li><a href="/Games/rock_paper_scissors">Rock Paper Scissor</a></li>
-      <li><a href="/Games/guess_the_number">Guess the number</a></li>
-      <li><a href="/Games/tic_tac_toe">Tic-Tac-Toe</a></li>
-      <li><a href="/Games/road_crossing">Road crossing</a></li>
-      <li><a href="/Games/pong">Pong</a></li>
-      <li><a href="/Games/turtle_racing_bet">Turtle racing bet</a></li>
-      <li><a href="/Games/snake_game">Snake game</a></li>
-      <li><a href="/Games/etch_a_sketch">Etch A Sketch</a></li>
-    <h3>Tools</h3>
-      <li><a href="/Tools/encoding">Encoding</a></li>
-      <li><a href="/Tools/calculator">Calculator</a></li>
-      <li><a href="/Tools/NATO_alphabet_translator">NATO Alphabet Translator</a></li>
-      <li><a href="/Tools/distance_calculator">Distance Conversion Calculator</a></li>
-      <li><a href="/Tools/pomodoro_timer">Pomodoro Timer</a></li>
-      <li><a href="/Tools/password_manager">Password Manager</a></li>
-   </h3>
-  </ol.s>
-</details>
+ 
+![GitHub contributors](https://img.shields.io/github/contributors/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
+![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/AseanK/beginner-python-tools-and-games?style=flate&color=fb07c8)
+![GitHub issues](https://img.shields.io/github/issues-raw/AseanK/beginner-python-tools-and-games?style=flate&color=aqua)
+![GitHub last commit](https://img.shields.io/github/last-commit/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
+![GitHub Maintained](https://img.shields.io/badge/maintained-yes-fb07c8.svg?style=flat)
+![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/beginner-python-tools-and-games?style=flat&color=aqua)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
 </div>
+  <!----------------Badge END-------------->
+
+  
+## Table of Contents
+
+[Getting Started](#getting-started)
+  
+[Contributing](#contributing)
+  
+<details>
+<summary><strong>Games</strong></summary>
+
+- [Auction](/Games/auction)
+- [BlackJack](/Games/black_jack)
+- [Slot Machine](/Games/slot_machine)
+- [Board filling game](/Games/board_filling_game)
+- [US states guessing](/Games/state_guessing)
+- [Minesweeper](/Games/minesweeper)
+- [Hang Man](/Games/hangman)
+- [Rock Paper Scissors](/Games/rock_paper_scissors)
+- [Guess the number](/Games/guess_the_number)
+- [Tic-Tac-Toe](/Games/tic_tac_toe)
+- [Road crossing](/Games/road_crossing)
+- [Pong](/Games/pong)
+- [Turtle racing bet](/Games/turtle_racing_bet)
+- [Snake game](/Games/snake_game)
+- [Etch A Sketch](/Games/etch_a_sketch)
+
+</details>
+
+<details>
+<summary><strong>Tools</strong></summary>
+
+- [Encoding](/Tools/encoding)
+- [Calculator](/Tools/calculator)
+- [NATO Alphabet Translator](/Tools/NATO_alphabet_translator)
+- [Distance Conversion Calculator](/Tools/distance_calculator)
+- [Pomodoro Timer](/Tools/pomodoro_timer)
+- [Password Manager](/Tools/password_manager)
+
+</details>
+
+
 <br /><br />
 
 
-## :eyes: About The Project
-This is a beginner friendly **open source** project where developers build, play, or even learn various games and tools built with Python!
+## 👀About The Project
+🎮 Welcome to the **Awesome Open Source** Python Games and Tools repository! 🛠️
+  
+This curated collection of open source games and tools is specifically designed to empower beginners in their journey to learn and explore Python programming. 🌟 We strongly encourage contributions from the community to enrich this repository with new games, tools, and improvements.
 <br /><br />
 
 
-## :mushroom: Installation
-**Follow steps down below to install and run the project**
+## 🍄Getting Started
 
-:rice_ball: Clone the repo 
+To get started, you'll need to have Python installed on your machine. You can download Python from the official website: [python.org](https://www.python.org/).
+
+Once Python is installed, you can follow the following steps:
+
+### Step 1
+- Clone the repository using the following command: 
 ```bash
 git clone git@github.com:AseanK/beginner-python-tools-and-games.git
 ```
-<br />
 
-:rice_ball: Head to the game folder you want to play
+### Step 2
+- Now you can explore the games and tools provided in the repository.
+- After cloning the repository, navigate to the project directory:
 ```bash
-cd "Name_of_the_folder"
+cd "<Name_of_the_folder>"
+```
+
+### Step 3
+- Run the file using python command
+```bash
+python <"name_of_the_game/tool">.py
 ```
 <br />
 
-:rice_ball: Run the file using python command
-```bash
-python name_of_the_game/tool.py
-```
-<br />
-
-## :sparkles: Contribute
-
-**Follow steps down below to contribute to the project**
-
-:rice_ball: Fork the Project
-    <img src="/images/fork.png" width="120" height="27">
-    
-<br />
-    
-:rice_ball: Clone the repo 
-```bash
-git clone git@github.com:AseanK/beginner-python-tools-and-games.git
-```
-<br />
-
-:rice_ball: Create your own Branch 
-```bash
-git checkout -b Name_of_your_game
-```
-<br />
-
-:rice_ball: Make changes and commit your Changes 
-```bash
-git commit -m 'Comments'
-```
-<br />
-
-:rice_ball: Push to the Branch 
-```bash
-git push origin Name_of_your_game
-```
-<br />
-
-:rice_ball: Open a Pull Request
-<br /><br />
-
-
+## ✨contributing
+  
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We welcome contributions from everyone! If you have an idea for a new game or tool, or if you want to improve the existing ones, please follow these steps:
+
+### Step 1
+- Fork the repository.
+    <img src="/images/fork.png" width="120" height="27">
+
+    
+### Step 2
+- Clone the repository.
+```bash
+git clone git@github.com:AseanK/beginner-python-tools-and-games.git
+```
+
+### Step 3
+- Create a new branch for your feature or improvement.
+```bash
+git checkout -b <Name_of_your_game>
+```
+
+### Step 4
+- Make your changes and commit them with descriptive messages.
+```bash
+git commit -m '<Comments>'
+```
+
+### Step 5
+- Push your changes to your forked repository.
+```bash
+git push origin <Name_of_your_game>
+```
+
+### Step 6
+- Submit a pull request to the main repository.
+<br />
 
 Please create a simple README.md file using provided template!
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-
-<br />
-
+  
 ## :raised_hands: Contributors
 
 <a href="https://github.com/AseanK/beginner-python-tools-and-games/graphs/contributors">
