@@ -11,6 +11,8 @@
 2. Click the Kaynye icon for your daily quote.
 
 <img src="Screenshot.png">
+
+
 ## How to install and run
 1. Fork the repo by clicking the fork logo on the top right <img src="../../images/fork.png" width="300" height="60">
 2. Clone the repo `git clone git@github.com:AseanK/beginner-python-tools-and-games.git`
