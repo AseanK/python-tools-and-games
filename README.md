@@ -56,6 +56,7 @@
 - [Turtle racing bet](/Games/turtle_racing_bet)
 - [Snake game](/Games/snake_game)
 - [Etch A Sketch](/Games/etch_a_sketch)
+- [CompSci Quiz](/Games/comp_sci_quiz)
 
 </details>
 
