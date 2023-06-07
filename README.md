@@ -1,19 +1,19 @@
-<h1 align="center">Beginner python tools and games</h1>
+<h1 align="center">Python Tools and Games</h1>
 <br /><br />
 
 <!----------------Badge-------------->
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Contribution welcome-blueviolet.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
-<img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
-<img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/beginner-python-tools-and-games/issues" target="_blank">
+<img src="https://img.shields.io/badge/Contribution welcome-blueviolet.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
+<img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
+<img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
   
 </div>
 <!----------------Badge END-------------->
   
 <p align="center">
-  <a href="https://github.com/AseanK/beginner-python-tools-and-games" target="_blank">
+  <a href="https://github.com/AseanK/python-tools-and-games" target="_blank">
     <img src="images/mainLogo.jpg" width = "720px" height = "310px">
   </a>
 </p>
@@ -21,12 +21,12 @@
   <!----------------Badge-------------->
 <div align="center">
  
-![GitHub contributors](https://img.shields.io/github/contributors/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
-![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/AseanK/beginner-python-tools-and-games?style=flate&color=fb07c8)
-![GitHub issues](https://img.shields.io/github/issues-raw/AseanK/beginner-python-tools-and-games?style=flate&color=aqua)
-![GitHub last commit](https://img.shields.io/github/last-commit/AseanK/beginner-python-tools-and-games?style=flat&color=blueviolet)
+![GitHub contributors](https://img.shields.io/github/contributors/AseanK/python-tools-and-games?style=flat&color=blueviolet)
+![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/AseanK/python-tools-and-games?style=flate&color=fb07c8)
+![GitHub issues](https://img.shields.io/github/issues-raw/AseanK/python-tools-and-games?style=flate&color=aqua)
+![GitHub last commit](https://img.shields.io/github/last-commit/AseanK/python-tools-and-games?style=flat&color=blueviolet)
 ![GitHub Maintained](https://img.shields.io/badge/maintained-yes-fb07c8.svg?style=flat)
-![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/beginner-python-tools-and-games?style=flat&color=aqua)
+![Github Repo Size](https://img.shields.io/github/repo-size/AseanK/python-tools-and-games?style=flat&color=aqua)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
 </div>
   <!----------------Badge END-------------->
@@ -94,7 +94,7 @@ Once Python is installed, you can follow the following steps:
 ### Step 1
 - Clone the repository using the following command: 
 ```bash
-git clone git@github.com:AseanK/beginner-python-tools-and-games.git
+git clone git@github.com:AseanK/python-tools-and-games.git
 ```
 
 ### Step 2
@@ -157,8 +157,8 @@ Don't forget to give the project a star! Thanks again!
   
 ## :raised_hands: Contributors
 
-<a href="https://github.com/AseanK/beginner-python-tools-and-games/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AseanK/beginner-python-tools-and-games" />
+<a href="https://github.com/AseanK/python-tools-and-games/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AseanK/python-tools-and-games" />
 </a>
 
 <br />
