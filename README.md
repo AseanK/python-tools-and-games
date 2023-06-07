@@ -1,4 +1,4 @@
-<h1 align="center">Beginner python tools and games</h1>
+<h1 align="center">Python Tools and Games</h1>
 <br /><br />
 
 <!----------------Badge-------------->
