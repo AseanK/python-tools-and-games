@@ -70,6 +70,7 @@
 - [Pomodoro Timer](/Tools/pomodoro_timer)
 - [Password Manager](/Tools/password_manager)
 - [Kanye Says...](/Tools/kanye_says)
+- [Cookie Macro](/Tools/cookie_macro)
 
 </details>
 
