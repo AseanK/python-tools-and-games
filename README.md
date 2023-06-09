@@ -89,12 +89,16 @@ This curated collection of open source games and tools is specifically designed 
 
 To get started, you'll need to have Python installed on your machine. You can download Python from the official website: [python.org](https://www.python.org/).
 
-Once Python is installed, you can follow the following steps:
+Once Python is installed, you can take the following steps:
 
 ### Step 1
-- Clone the repository using the following command: 
+- Clone the repository using either of the following commands: 
 ```bash
 git clone git@github.com:AseanK/python-tools-and-games.git
+```
+or
+```bash
+git clone https://github.com/AseanK/python-tools-and-games.git
 ```
 
 ### Step 2
@@ -107,40 +111,44 @@ cd "<Name_of_the_folder>"
 ### Step 3
 - Run the file using python command
 ```bash
-python <"name_of_the_game/tool">.py
+python "<Name_of_the_game/tool>.py"
 ```
 <br />
 
-## ✨contributing
+## ✨Contributing
   
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 We welcome contributions from everyone! If you have an idea for a new game or tool, or if you want to improve the existing ones, please follow these steps:
 
 ### Step 1
-- Fork the repository.
-    <img src="/images/fork.png" width="120" height="27">
+- Fork the repository:
+<img src="/images/fork.png" width="120" height="27">
 
     
 ### Step 2
-- Clone the repository.
+- Clone the repository:
 ```bash
 git clone git@github.com:AseanK/beginner-python-tools-and-games.git
 ```
+or
+```bash
+git clone https://github.com/AseanK/python-tools-and-games.git
+```
 
 ### Step 3
-- Create a new branch for your feature or improvement.
+- Create a new branch for your feature or improvement:
 ```bash
 git checkout -b <Name_of_your_game>
 ```
 
 ### Step 4
-- Make your changes and commit them with descriptive messages.
+- Make your changes and commit them with descriptive messages:
 ```bash
 git commit -m '<Comments>'
 ```
 
 ### Step 5
-- Push your changes to your forked repository.
+- Push your changes to your forked repository:
 ```bash
 git push origin <Name_of_your_game>
 ```
