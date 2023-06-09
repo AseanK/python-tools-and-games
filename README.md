@@ -96,7 +96,7 @@ Once Python is installed, you can take the following steps:
 ```bash
 git clone git@github.com:AseanK/python-tools-and-games.git
 ```
-or
+  or
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
@@ -122,7 +122,7 @@ We welcome contributions from everyone! If you have an idea for a new game or to
 
 ### Step 1
 - Fork the repository:
-<img src="/images/fork.png" width="120" height="27">
+<img src="/images/fork.png" width="144" height="26">
 
     
 ### Step 2
@@ -130,7 +130,7 @@ We welcome contributions from everyone! If you have an idea for a new game or to
 ```bash
 git clone git@github.com:AseanK/beginner-python-tools-and-games.git
 ```
-or
+  or
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
