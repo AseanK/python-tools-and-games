@@ -96,7 +96,7 @@ Once Python is installed, you can take the following steps:
 ```bash
 git clone git@github.com:AseanK/python-tools-and-games.git
 ```
-  or
+or
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
@@ -130,7 +130,7 @@ We welcome contributions from everyone! If you have an idea for a new game or to
 ```bash
 git clone git@github.com:AseanK/beginner-python-tools-and-games.git
 ```
-  or
+or
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
