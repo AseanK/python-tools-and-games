@@ -68,7 +68,6 @@
 - [NATO Alphabet Translator](/Tools/NATO_alphabet_translator)
 - [Distance Conversion Calculator](/Tools/distance_calculator)
 - [Pomodoro Timer](/Tools/pomodoro_timer)
-- [Password Manager](/Tools/password_manager)
 - [Kanye Says...](/Tools/kanye_says)
 - [Cookie Macro](/Tools/cookie_macro)
 
