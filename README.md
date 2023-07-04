@@ -70,6 +70,7 @@
 - [Pomodoro Timer](/Tools/pomodoro_timer)
 - [Kanye Says...](/Tools/kanye_says)
 - [Cookie Macro](/Tools/cookie_macro)
+- [QRcode Generator](/Tools/qrcode_gen)
 
 </details>
 
