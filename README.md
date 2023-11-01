@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/Contribution welcome-blueviolet.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
 <img src="https://img.shields.io/badge/Help wanted-fb07c8.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
 <img src="https://img.shields.io/badge/Open source-aqua.svg?style=for-the-badge" alt="Help wanted" /> <a href="https://github.com/AseanK/python-tools-and-games/issues" target="_blank">
-  
+
 </div>
 <!----------------Badge END-------------->
   
@@ -31,13 +31,12 @@
 </div>
   <!----------------Badge END-------------->
 
-  
 ## Table of Contents
 
 [Getting Started](#getting-started)
-  
+
 [Contributing](#contributing)
-  
+
 <details>
 <summary><strong>Games</strong></summary>
 
@@ -72,19 +71,18 @@
 - [Kanye Says...](/Tools/kanye_says)
 - [Cookie Macro](/Tools/cookie_macro)
 - [QRcode Generator](/Tools/qrcode_gen)
+- [Tip Calculator](/Tools/tip_calculator)
 
 </details>
 
-
 <br /><br />
-
 
 ## 👀About The Project
+
 🎮 Welcome to the **Awesome Open Source** Python Games and Tools repository! 🛠️
-  
+
 This curated collection of open source games and tools is specifically designed to empower beginners in their journey to learn and explore Python programming. 🌟 We strongly encourage contributions from the community to enrich this repository with new games, tools, and improvements.
 <br /><br />
-
 
 ## 🍄Getting Started
 
@@ -93,77 +91,96 @@ To get started, you'll need to have Python installed on your machine. You can do
 Once Python is installed, you can take the following steps:
 
 ### Step 1
-- Clone the repository using either of the following commands: 
+
+- Clone the repository using either of the following commands:
+
 ```bash
 git clone git@github.com:AseanK/python-tools-and-games.git
 ```
+
 or
+
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
 
 ### Step 2
+
 - Now you can explore the games and tools provided in the repository.
 - After cloning the repository, navigate to the project directory:
+
 ```bash
 cd "<Name_of_the_folder>"
 ```
 
 ### Step 3
+
 - Run the file using python command
+
 ```bash
 python "<Name_of_the_game/tool>.py"
 ```
+
 <br />
 
 ## ✨Contributing
-  
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 We welcome contributions from everyone! If you have an idea for a new game or tool, or if you want to improve the existing ones, please follow these steps:
 
 ### Step 1
-- Fork the repository:
-<img src="/images/fork.png" width="144" height="26">
 
-    
+- Fork the repository:
+  <img src="/images/fork.png" width="144" height="26">
+
 ### Step 2
+
 - Clone the repository:
+
 ```bash
 git clone git@github.com:AseanK/beginner-python-tools-and-games.git
 ```
+
 or
+
 ```bash
 git clone https://github.com/AseanK/python-tools-and-games.git
 ```
 
 ### Step 3
+
 - Create a new branch for your feature or improvement:
+
 ```bash
 git checkout -b <Name_of_your_game>
 ```
 
 ### Step 4
+
 - Make your changes and commit them with descriptive messages:
+
 ```bash
 git commit -m '<Comments>'
 ```
 
 ### Step 5
+
 - Push your changes to your forked repository:
+
 ```bash
 git push origin <Name_of_your_game>
 ```
 
 ### Step 6
+
 - Submit a pull request to the main repository.
-<br />
+  <br />
 
 Please create a simple README.md file using provided template!
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-  
 ## :raised_hands: Contributors
 
 <a href="https://github.com/AseanK/python-tools-and-games/graphs/contributors">
