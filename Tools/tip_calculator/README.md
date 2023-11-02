@@ -7,7 +7,7 @@
 # Tip Calculator / Splitter
 <!-- Game Rules -->
 ## Features
-1. This program splits a given amount of bill and tip equally betwwen a given number of persons eg it can split $120 alongside a tip of 12% equally betwwen 5 persons and gives you the amount each person is expected to pay
+1. This program splits a given amount of bill and tip equally between a given number of persons eg it can split $120 alongside a tip of 12% equally between 5 persons and gives you the amount each person is expected to pay
 2. Follow the prompts and enter the required information and the app handles the rest for you
 
 ## How to install and run
