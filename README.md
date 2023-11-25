@@ -58,6 +58,7 @@
 - [CompSci Quiz](/Games/comp_sci_quiz)
 - [Treasure Island](Games/treasure_Island)
 - [Pizza Palour](Games/pizza_palour)
+- [Checkers](Games/checkers)
 
 </details>
 
