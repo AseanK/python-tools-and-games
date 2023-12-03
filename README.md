@@ -74,6 +74,7 @@
 - [Cookie Macro](/Tools/cookie_macro)
 - [QRcode Generator](/Tools/qrcode_gen)
 - [Tip Calculator](/Tools/tip_calculator)
+- [Auto WiFi Check](/Tools/AutoWiFiCheck)
 
 </details>
 
