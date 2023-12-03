@@ -59,6 +59,7 @@
 - [Treasure Island](Games/treasure_Island)
 - [Pizza Palour](Games/pizza_palour)
 - [Checkers](Games/checkers)
+- [General Quiz Game](<Games/General Quiz Game>)
 
 </details>
 
