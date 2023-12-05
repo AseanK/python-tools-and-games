@@ -21,4 +21,9 @@
 4. Run the file using python command `python main.py`
 5. Follow the prompts in the console to play the game. 
 
+## How to deply using Streamlit or run on localhost
+1. create a python virtual environment: python -m venev <env_name>
+2. install required dependencies: pip install -r requirements.txt
+3. run it on local host using following command: streamlit run streamlit_main.py
+
 ### Enjoy playing Treasure Island!
