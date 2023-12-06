@@ -1,4 +1,5 @@
 from turtle import Turtle
+from playsound import playsound 
 
 # Create a ball
 class Ball(Turtle):
@@ -21,11 +22,12 @@ class Ball(Turtle):
     # Bounce when hit upper and lower walls / flip Y-axis
     def bounce_wall(self):
         self.y_position *= -1
+        playsound('/bounce.wav')
 
     # Bounce when hit either paddles / flip X-axies
     def bounce_paddle(self):
         self.x_position *= -1
-
+        playsound('/bounce.wav')
     # Resets ball position
     def reset(self):
         self.setpos(0, 0)
