@@ -22,12 +22,12 @@ class Ball(Turtle):
     # Bounce when hit upper and lower walls / flip Y-axis
     def bounce_wall(self):
         self.y_position *= -1
-        playsound('/Users/benjamindunlap/game/python-tools-and-games/Games/pong/bounce.wav')
+        playsound('/bounce.wav')
 
     # Bounce when hit either paddles / flip X-axies
     def bounce_paddle(self):
         self.x_position *= -1
-        playsound('/Users/benjamindunlap/game/python-tools-and-games/Games/pong/bounce.wav')
+        playsound('/bounce.wav')
     # Resets ball position
     def reset(self):
         self.setpos(0, 0)
