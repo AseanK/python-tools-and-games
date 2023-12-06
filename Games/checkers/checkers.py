@@ -124,10 +124,6 @@ def draw_board():
         delta_row = dest_row - src_row
         delta_col = dest_col - src_col
 
-        while valid_move == True:
-            move_piece()
-            return True
-
         # Check if the destination slot is already occupied
         if board[dest_row][dest_col] is not None:
             return False
