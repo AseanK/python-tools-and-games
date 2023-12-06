@@ -1,6 +1,7 @@
 import random
 import os
 from sys import platform
+from colorama import Fore
 
 # Clears command line
 def clear():
@@ -75,28 +76,36 @@ def calcScore(hand):
 def checkWinner(user_score, computer_score):
     if user_score > 21 and computer_score > 21:
         print("    You lose, you went over. 😤")
+        print(f"{Fore.RED}Your updated balance is: {balance - bet}{Fore.RESET}")
         return balance - bet
     
     if user_score == computer_score:
         print("    Draw 🙃")
+        print(Fore.YELLOW + f"Your updated balance is: {balance}{Fore.RESET}")
         return balance
     elif computer_score == 0:
         print("    You lose, dealer has Blackjack 😱")
+        print(Fore.RED + f"Your updated balance is: {balance - bet}{Fore.RESET}")
         return balance - bet
     elif user_score == 0:
         print("    You Win with a Blackjack 😎")
+        print(Fore.GREEN + f"Your updated balance is: {balance+int(bet * 1.5)}{Fore.RESET}")
         return balance + int(bet * 1.5)
     elif user_score > 21:
         print("    You lose, you went over 😭")
+        print(Fore.RED + f"Your updated balance is: {balance+bet}{Fore.RESET}")
         return balance - bet
     elif computer_score > 21:
         print("    You win, dealer went over 😁")
+        print(Fore.GREEN + f"Your updated balance is: {balance+bet}{Fore.RESET}")
         return balance + bet
     elif user_score > computer_score:
         print("    You win 😃")
+        print(Fore.GREEN + f"Your updated balance is: {balance + bet}{Fore.RESET}")
         return balance + bet
     else:
         print("    You lose 😤")
+        print(Fore.RED + f"Your updated balance is: {balance - bet}{Fore.RESET}")
         return balance - bet
 
 def play_game():
@@ -107,9 +116,6 @@ def play_game():
     is_game_over = False
     if not cards:
         cards = new_cards()
-
-
-
 
     for _ in range(2):
         user_cards.append(deal_card())
