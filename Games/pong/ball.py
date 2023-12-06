@@ -1,4 +1,5 @@
 from turtle import Turtle
+import os
 
 # Create a ball
 class Ball(Turtle):
@@ -21,11 +22,13 @@ class Ball(Turtle):
     # Bounce when hit upper and lower walls / flip Y-axis
     def bounce_wall(self):
         self.y_position *= -1
+        os.system("afplay bounce.wav&")
 
     # Bounce when hit either paddles / flip X-axies
     def bounce_paddle(self):
         self.x_position *= -1
-
+        os.system("afplay bounce.wav&")
+        
     # Resets ball position
     def reset(self):
         self.setpos(0, 0)
