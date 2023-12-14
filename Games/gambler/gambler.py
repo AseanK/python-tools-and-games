@@ -22,9 +22,9 @@ def main():
     time.sleep(1)
     balance = 100
     willing_to_quit = False
-    print(f"--Your starting balance is {balance}$")
+    print(f"--Your starting balance is ${balance}")
     while balance > 0 and willing_to_quit == False:
-        bet = input(f"1.Make a bet, you have {balance}$, or if you want to quit press q \n")
+        bet = input(f"Make a bet, you have ${balance}, or if you want to quit press q \n")
         if bet == "q":
             willing_to_quit = True
             continue
@@ -37,10 +37,12 @@ def main():
         if bet <= balance:
             guess =-1
             while guess > 3 or guess < 1:
-                guess = int(input("2.Pick a cup from 1-3,\n"))
-            anwser = random.randint(1,3)
-            print("3.Checkcking your luck!")
-            if anwser == guess:
+                guess = int(input("Pick a cup from 1-3,\n"))
+                if guess > 3 or guess < 1:
+                    print("Invalid entry: Please select cup between 1 and 3")
+            answer = random.randint(1,3)
+            print("Checkcking your luck!")
+            if answer == guess:
                 print("YES!YES!YES!")
                 balance+=bet
             else:
