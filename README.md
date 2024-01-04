@@ -76,6 +76,8 @@
 - [QRcode Generator](/Tools/qrcode_gen)
 - [Tip Calculator](/Tools/tip_calculator)
 - [Auto WiFi Check](/Tools/AutoWiFiCheck)
+- [PDF Merge](Tools/merge_pdf)
+- [Text Summarizer](Tools/text_summarizer)
 
 </details>
 
