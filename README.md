@@ -60,6 +60,7 @@
 - [Pizza Palour](Games/pizza_palour)
 - [Checkers](Games/checkers)
 - [General Quiz Game](<Games/General Quiz Game>)
+- [Ludo King](Games/ludo_king)
 
 </details>
 
