@@ -1,4 +1,4 @@
-# Ludo-King game
+ Ludo-King game
 <!-- Game Rules -->
 
 In this particular file a simple version of the "Ludo King" game is presented. 
