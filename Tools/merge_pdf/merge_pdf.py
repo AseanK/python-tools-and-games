@@ -60,21 +60,24 @@ after merging it will open up a file manager dialog box asking filename and loca
 '''
 
 def merge():
-    if not pdf_to_be_merged:
-        tk.messagebox.showwarning("No Files", "Please select PDF files to merge.")
-        return
-    
-    merger = PdfWriter()
-    for pdf in pdf_to_be_merged:
-        merger.append(pdf)
+    try:
+        if not pdf_to_be_merged:
+            tk.messagebox.showwarning("No Files", "Please select PDF files to merge.")
+            return
 
-    output = filedialog.asksaveasfilename(defaultextension=".pdf", filetypes=[("PDF files", "*.pdf")],
-                                           title="Save Merged PDF As")
-    if output:
-        with open(output, "wb") as output_file:
-            merger.write(output_file)
-        tk.messagebox.showinfo("Merge Complete", "PDF files merged successfully.")
-    merger.close()
+        merger = PdfWriter()
+        for pdf in pdf_to_be_merged:
+            merger.append(pdf)
+
+        output = filedialog.asksaveasfilename(defaultextension=".pdf", filetypes=[("PDF files", "*.pdf")],
+                                              title="Save Merged PDF As")
+        if output:
+            with open(output, "wb") as output_file:
+                merger.write(output_file)
+            tk.messagebox.showinfo("Merge Complete", "PDF files merged successfully.")
+        merger.close()
+    except Exception as e:
+        tk.messagebox.showinfo("Error happened.", f"Error happened please try again : error message - {str(e)}")
 
 
 '''
