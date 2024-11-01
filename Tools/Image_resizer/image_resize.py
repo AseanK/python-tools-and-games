@@ -11,7 +11,6 @@ def reduce_image_size(image_path, quality=85):
     if ext in ['.jpg', '.jpeg']:
         img.save(output_path, "JPEG", quality=quality)
     elif ext == '.png':
-        # 1. 색상 수 줄이기 (8비트 PNG로 변환)
         img = img.convert("P", palette=Image.ADAPTIVE, colors=256)
         img.save(output_path, "PNG", optimize=True)
     else:
