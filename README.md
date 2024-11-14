@@ -79,6 +79,10 @@
 - [Auto WiFi Check](/Tools/AutoWiFiCheck)
 - [PDF Merge](Tools/merge_pdf)
 - [Text Summarizer](Tools/text_summarizer)
+- [Image Resizer](Tools/Image_resizer)
+- [Remove Duplicates](Tools/remove_duplicates)
+- [Password Strength Checker](Tools/Password_strength_checker)
+- [Bluetooth Scanner](Tools/bluetooth_scanner)
 
 </details>
 
