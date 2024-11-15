@@ -83,6 +83,7 @@
 - [Remove Duplicates](Tools/remove_duplicates)
 - [Password Strength Checker](Tools/Password_strength_checker)
 - [Bluetooth Scanner](Tools/bluetooth_scanner)
+- [Custom Password Generator](Tools/custom_password_generator)
 
 </details>
 
