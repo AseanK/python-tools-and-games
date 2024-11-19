@@ -61,6 +61,7 @@
 - [Checkers](Games/checkers)
 - [General Quiz Game](<Games/General Quiz Game>)
 - [Ludo King](Games/ludo_king)
+- [Chin Chiro](Games/chin_chiro)
 
 </details>
 
