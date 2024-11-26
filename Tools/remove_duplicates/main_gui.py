@@ -21,7 +21,6 @@ def process_file():
         messagebox.showerror("Input Error", "Please select an input file.")
         return
 
-    # 기본 출력 파일 이름 설정
     if not output_file:
         file_ext = os.path.splitext(input_file)[1]
         default_output = f"{os.path.splitext(input_file)[0]}_output{file_ext}"
