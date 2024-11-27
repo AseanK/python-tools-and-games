@@ -9,6 +9,33 @@ class MemoryGame:
         self.board = [[' ' for _ in range(size)] for _ in range(size)]
         self.revealed = [[False for _ in range(size)] for _ in range(size)]
         self.shuffle_board()
+        
+    def shuffle_board(self):
+        random.shuffle(self.symbols)
+        for i in range(self.size):
+            for j in range(self.size):
+                self.board[i][j] = self.symbols[i * self.size + j]
+    
+    def clear_screen(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
+    
+    def display_board(self):
+        self.clear_screen()
+        print("  " + " ".join(str(i) for i in range(self.size)))
+        for i in range(self.size):
+            row = [self.board[i][j] if self.revealed[i][j] else '▢' for j in range(self.size)]
+            print(f"{i} {' '.join(row)}")
+    
+    def get_move(self):
+        while True:
+            try:
+                row = int(input("Enter row (0-3): "))
+                col = int(input("Enter column (0-3): "))
+                if 0 <= row < self.size and 0 <= col < self.size and not self.revealed[row][col]:
+                    return row, col
+                print("Invalid move. Try again.")
+            except ValueError:
+                print("Please enter numbers only.")
     
     def play(self):
         pairs_found = 0
