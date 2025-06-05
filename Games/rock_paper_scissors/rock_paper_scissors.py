@@ -1,5 +1,6 @@
 import os
 import random
+import sys
 from time import sleep
 
 choices = ['rock', 'paper', 'scissors']
@@ -10,7 +11,17 @@ round_counter = 0
 
 clear = lambda: os.system('cls')
 
-print('Welcome to Rock Paper Scissors!')
+def clear():
+    if sys.platform in ["linux", "linux2", "darwin"]:
+        # linux or OS X
+        os.system("clear")
+    elif sys.platform == "win32":
+        # Windows
+        os.system("cls")
+
+
+clear()
+print("Welcome to Rock Paper Scissors!")
 
 while True:
     cpu_choice = random.choice(choices)
