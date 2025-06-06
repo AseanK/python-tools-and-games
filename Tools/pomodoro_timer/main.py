@@ -38,7 +38,10 @@ def start_timer():
     global reps
     reps += 1
 
-    if reps == 8:
+    if reps > 1:
+        window.after_cancel(timer)
+
+    if reps % 8 == 0:
         count_down(LONG_BREAK_MIN * 60)
         start_label.config(text="Break", fg=RED, bg=YELLOW)
     elif reps % 2 == 0:
