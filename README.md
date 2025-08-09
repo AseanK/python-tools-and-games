@@ -86,7 +86,7 @@
 - [Bluetooth Scanner](Tools/bluetooth_scanner)
 - [Custom Password Generator](Tools/custom_password_generator)
 - [Binary Converter](Tools/binary_converter)
-- [Expense Tracker](/Tools/Expense Tracker)
+- [Expense Tracker](<Tools/Expense Tracker>)
 
 </details>
 
