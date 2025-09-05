@@ -4,11 +4,13 @@ on:
   push:
     paths:
       - 'Games/**'
-      - 'Tools/**'   # Runs if either folder changes
+      - 'Tools/**'
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow pushing changes
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -17,26 +19,24 @@ jobs:
       - name: Generate games list
         run: |
           echo "## 🎮 Games" > games_list.md
-          for file in Games/*.py; do
-            fname=$(basename "$file")
-            echo "- [$fname](Games/$fname)" >> games_list.md
+          for file in Games/*/*.py; do
+            folder=$(basename "$(dirname "$file")")
+            echo "- [$folder](Games/$folder)" >> games_list.md
           done
 
       # ---- Generate Tools List ----
       - name: Generate tools list
         run: |
           echo "## 🛠️ Tools" > tools_list.md
-          for file in Tools/*.py; do
-            fname=$(basename "$file")
-            echo "- [$fname](Tools/$fname)" >> tools_list.md
+          for file in Tools/*/*.py; do
+            folder=$(basename "$(dirname "$file")")
+            echo "- [$folder](Tools/$folder)" >> tools_list.md
           done
 
       # ---- Update README ----
       - name: Update README
         run: |
-          # Replace Games section
           sed -i '/<!--GAMES_START-->/,/<!--GAMES_END-->/c\<!--GAMES_START-->\n'"$(cat games_list.md)"'\n<!--GAMES_END-->' README.md
-          # Replace Tools section
           sed -i '/<!--TOOLS_START-->/,/<!--TOOLS_END-->/c\<!--TOOLS_START-->\n'"$(cat tools_list.md)"'\n<!--TOOLS_END-->' README.md
 
       # ---- Commit & Push ----
