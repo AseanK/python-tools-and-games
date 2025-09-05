@@ -89,14 +89,54 @@ python "file_name.py"
 
 ## 🎮Games
 <!--GAMES_START-->
-(list of games will appear here)
+- [Auction](/Games/auction)
+- [BlackJack](/Games/black_jack)
+- [Slot Machine](/Games/slot_machine)
+- [Board filling game](/Games/board_filling_game)
+- [US states guessing](/Games/state_guessing)
+- [Minesweeper](/Games/minesweeper)
+- [Hang Man](/Games/hangman)
+- [Rock Paper Scissors](/Games/rock_paper_scissors)
+- [Guess the number](/Games/guess_the_number)
+- [Tic-Tac-Toe](/Games/tic_tac_toe)
+- [Road crossing](/Games/road_crossing)
+- [Pong](/Games/pong)
+- [Turtle racing bet](/Games/turtle_racing_bet)
+- [Snake game](/Games/snake_game)
+- [Etch A Sketch](/Games/etch_a_sketch)
+- [CompSci Quiz](/Games/comp_sci_quiz)
+- [Treasure Island](Games/treasure_Island)
+- [Pizza Palour](Games/pizza_palour)
+- [Checkers](Games/checkers)
+- [General Quiz Game](<Games/General Quiz Game>)
+- [Ludo King](Games/ludo_king)
+- [Magic8Ball](Games/magic8ball)
+- [Chin Chiro](Games/chin_chiro)
 <!--GAMES_END-->
 <br />
 
 
 ## 🛠️Tools
 <!--TOOLS_START-->
-(list of tools will appear here)
+- [Encoding](/Tools/encoding)
+- [Calculator](/Tools/calculator)
+- [NATO Alphabet Translator](/Tools/NATO_alphabet_translator)
+- [Distance Conversion Calculator](/Tools/distance_calculator)
+- [Pomodoro Timer](/Tools/pomodoro_timer)
+- [Kanye Says...](/Tools/kanye_says)
+- [Cookie Macro](/Tools/cookie_macro)
+- [QRcode Generator](/Tools/qrcode_gen)
+- [Tip Calculator](/Tools/tip_calculator)
+- [Auto WiFi Check](/Tools/AutoWiFiCheck)
+- [PDF Merge](Tools/merge_pdf)
+- [Text Summarizer](Tools/text_summarizer)
+- [Image Resizer](Tools/Image_resizer)
+- [Remove Duplicates](Tools/remove_duplicates)
+- [Password Strength Checker](Tools/Password_strength_checker)
+- [Bluetooth Scanner](Tools/bluetooth_scanner)
+- [Custom Password Generator](Tools/custom_password_generator)
+- [Binary Converter](Tools/binary_converter)
+- [Expense Tracker](<Tools/Expense Tracker>)
 <!--TOOLS_END-->
 
 <br />
