@@ -168,7 +168,7 @@ Create a new branch for your feature or improvement:
 ```bash
 git checkout -b <branch_name>
 ```
-Step 4: Make Changes
+### Step 4: Make Changes
 
 Implement your changes, then commit them with a descriptive message:
 
