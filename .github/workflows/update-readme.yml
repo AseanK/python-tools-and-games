@@ -20,26 +20,22 @@ jobs:
         run: |
           # ---- Generate Games List ----
           GAMES_LIST="## 🎮 Games"
-          if find Games -type f -name "*.py" | grep -q .; then
-            while IFS= read -r file; do
-              folder=$(basename "$(dirname "$file")")
-              if ! echo "$GAMES_LIST" | grep -q "($folder)"; then
-                GAMES_LIST+="\n- [$folder](Games/$folder)"
-              fi
-            done < <(find Games -type f -name "*.py")
+          if [ -d "Games" ] && [ "$(find Games -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
+            for folder in $(find Games -mindepth 1 -maxdepth 1 -type d | sort); do
+              name=$(basename "$folder")
+              GAMES_LIST+="\n- [$name]($folder)"
+            done
           else
             GAMES_LIST+="\n_No games available yet._"
           fi
 
           # ---- Generate Tools List ----
           TOOLS_LIST="## 🛠️ Tools"
-          if find Tools -type f -name "*.py" | grep -q .; then
-            while IFS= read -r file; do
-              folder=$(basename "$(dirname "$file")")
-              if ! echo "$TOOLS_LIST" | grep -q "($folder)"; then
-                TOOLS_LIST+="\n- [$folder](Tools/$folder)"
-              fi
-            done < <(find Tools -type f -name "*.py")
+          if [ -d "Tools" ] && [ "$(find Tools -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
+            for folder in $(find Tools -mindepth 1 -maxdepth 1 -type d | sort); do
+              name=$(basename "$folder")
+              TOOLS_LIST+="\n- [$name]($folder)"
+            done
           else
             TOOLS_LIST+="\n_No tools available yet._"
           fi
