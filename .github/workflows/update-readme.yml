@@ -1,6 +1,7 @@
 name: Update README with Games & Tools List
 
 on:
+  workflow_dispatch:   # <-- Manual trigger (you can run it anytime)
   push:
     paths:
       - 'Games/**'
@@ -14,12 +15,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Generate Games & Tools list and update README
         shell: bash
         run: |
           # ---- Generate Games List ----
-          GAMES_LIST="## 🎮 Games"
+          GAMES_LIST=""
           if [ -d "Games" ] && [ "$(find Games -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
             for folder in $(find Games -mindepth 1 -maxdepth 1 -type d | sort); do
               name=$(basename "$folder")
@@ -30,7 +31,7 @@ jobs:
           fi
 
           # ---- Generate Tools List ----
-          TOOLS_LIST="## 🛠️ Tools"
+          TOOLS_LIST=""
           if [ -d "Tools" ] && [ "$(find Tools -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
             for folder in $(find Tools -mindepth 1 -maxdepth 1 -type d | sort); do
               name=$(basename "$folder")
