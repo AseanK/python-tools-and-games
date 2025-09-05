@@ -1,0 +1,49 @@
+name: Update README with Games & Tools List
+
+on:
+  push:
+    paths:
+      - 'games/**'
+      - 'tools/**'   # Runs if either folder changes
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # ---- Generate Games List ----
+      - name: Generate games list
+        run: |
+          echo "## 🎮 Games" > games_list.md
+          for file in games/*.py; do
+            fname=$(basename "$file")
+            echo "- [$fname](games/$fname)" >> games_list.md
+          done
+
+      # ---- Generate Tools List ----
+      - name: Generate tools list
+        run: |
+          echo "## 🛠️ Tools" > tools_list.md
+          for file in tools/*.py; do
+            fname=$(basename "$file")
+            echo "- [$fname](tools/$fname)" >> tools_list.md
+          done
+
+      # ---- Update README ----
+      - name: Update README
+        run: |
+          # Replace Games section
+          sed -i '/<!--GAMES_START-->/,/<!--GAMES_END-->/c\<!--GAMES_START-->\n'"$(cat games_list.md)"'\n<!--GAMES_END-->' README.md
+          # Replace Tools section
+          sed -i '/<!--TOOLS_START-->/,/<!--TOOLS_END-->/c\<!--TOOLS_START-->\n'"$(cat tools_list.md)"'\n<!--TOOLS_END-->' README.md
+
+      # ---- Commit & Push ----
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "Auto-update games & tools list [skip ci]" || echo "No changes"
+          git push
