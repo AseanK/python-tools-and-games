@@ -1,0 +1,61 @@
+name: Update README with Games & Tools List
+
+on:
+  workflow_dispatch:   # <-- Manual trigger (you can run it anytime)
+  push:
+    paths:
+      - 'Games/**'
+      - 'Tools/**'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Generate Games & Tools list and update README
+        shell: bash
+        run: |
+          # ---- Generate Games List ----
+          GAMES_LIST=""
+          if [ -d "Games" ] && [ "$(find Games -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
+            for folder in $(find Games -mindepth 1 -maxdepth 1 -type d | sort); do
+              name=$(basename "$folder")
+              GAMES_LIST+="\n- [$name]($folder)"
+            done
+          else
+            GAMES_LIST+="\n_No games available yet._"
+          fi
+
+          # ---- Generate Tools List ----
+          TOOLS_LIST=""
+          if [ -d "Tools" ] && [ "$(find Tools -mindepth 1 -maxdepth 1 -type d | wc -l)" -gt 0 ]; then
+            for folder in $(find Tools -mindepth 1 -maxdepth 1 -type d | sort); do
+              name=$(basename "$folder")
+              TOOLS_LIST+="\n- [$name]($folder)"
+            done
+          else
+            TOOLS_LIST+="\n_No tools available yet._"
+          fi
+
+          # ---- Update README ----
+          awk -v games="$GAMES_LIST" -v tools="$TOOLS_LIST" '
+            BEGIN { in_games=0; in_tools=0 }
+            /<!--GAMES_START-->/ { print "<!--GAMES_START-->\n" games "\n<!--GAMES_END-->"; in_games=1; next }
+            /<!--GAMES_END-->/ { in_games=0; next }
+            /<!--TOOLS_START-->/ { print "<!--TOOLS_START-->\n" tools "\n<!--TOOLS_END-->"; in_tools=1; next }
+            /<!--TOOLS_END-->/ { in_tools=0; next }
+            { if (!in_games && !in_tools) print }
+          ' README.md > README.tmp && mv README.tmp README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Auto-update games & tools list [skip ci]"
+          git push
