@@ -156,10 +156,10 @@ Clone the repository to your local machine:
 
 ```bash
 # Using SSH
-git clone git@github.com:<your-username>/python-tools-and-games.git
+git clone git@github.com:AseanK/python-tools-and-games.git
 
 # Using HTTPS
-git clone https://github.com/<your-username>/python-tools-and-games.git
+git clone https://github.com/AseanK/python-tools-and-games.git
 ```
 
 ### Step 3: Create a Branch
