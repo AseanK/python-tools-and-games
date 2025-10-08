@@ -45,6 +45,7 @@ clear()
 
 print(logo)
 
+#Add player
 bidding = True
 while bidding:
     name = input("Enter your name\n")
