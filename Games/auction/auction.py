@@ -44,10 +44,17 @@ def calcBid(players):
 clear()
 
 print(logo)
-# Adds player
+
+#Add player
 bidding = True
 while bidding:
-    name =  input("Enter your name\n")
+    name = input("Enter your name\n")
+
+    
+    if name in players:
+        print("This name is already taken")
+        continue 
+
     while True:
         bidAmount = input("Enter the bidding amount\n$")
         if bidAmount.isdigit():
@@ -60,7 +67,6 @@ while bidding:
             print(f"{bidAmount} is not a number")
 
     players[name] = bidAmount
-
 
     cont = (input("Add another player?\nEnter 'Yes' or 'No'\n")).lower()
 
