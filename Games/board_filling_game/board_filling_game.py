@@ -24,8 +24,7 @@ def welcome():
     print("4. Press Ctrl+C to interrupt and close the game.\n")
 
     print("Please enter the board size you want.")
-    height = 3
-    width = 3
+
     try:
         height = int(input("Height (default: 3) -> "))
         width = int(input("Width (default: 3) -> "))
@@ -47,11 +46,21 @@ def is_game_done(game_board):
     
     return True
 
-def print_board(game_board):
-    for row in game_board:
+def print_board(game_board, board_width):
+    """
+    Print the game board with column numbers and row numbers.
+    """
+    column_header = ["  "]
+    for column in range(1, board_width + 1):
+        column_header.append(str(column))
+    print(" ".join(column_header))
+
+    for row_index, row in enumerate(game_board, start=1):
+        row_parts = [f"{row_index:2}"]
         for cell in row:
-            print(cell, end=" ")
-        print()
+            row_parts.append(cell)
+        print(" ".join(row_parts))
+
 
 # Prints the piece onto the game screen
 def print_piece(current_piece):
@@ -162,7 +171,7 @@ if __name__=="__main__":
 
             # Display game board
             print("Game board:")
-            print_board(game_board)
+            print_board(game_board, width)
 
             # Get player input
             x, y = get_player_input()
@@ -172,7 +181,7 @@ if __name__=="__main__":
 
         # Game over
         print("Game over!")
-        print_board(game_board)
+        print_board(game_board, width)
         print(f"\nYou completed the board in {game_round} rounds!")
 
     except KeyboardInterrupt:
