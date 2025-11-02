@@ -20,18 +20,20 @@ def welcome():
     print("Rules: ")
     print("1. Enter coordinates to put the pieces on the board.")
     print("2. Enter (0, 0) to skip the round.")
-    print("3. Try to fill the board in as few rounds as possible!\n")
+    print("3. Try to fill the board in as few rounds as possible!")
+    print("4. Press Ctrl+C to interrupt and close the game.\n")
 
     print("Please enter the board size you want.")
-    height = 3
-    width = 3
+
     try:
         height = int(input("Height (default: 3) -> "))
         width = int(input("Width (default: 3) -> "))
-    except:
+    except ValueError:
         print("Invalid height. Using a 3x3 board as default.")
         height = 3
         width = 3
+    except KeyboardInterrupt:
+        raise
     
     return height, width
 
@@ -44,11 +46,21 @@ def is_game_done(game_board):
     
     return True
 
-def print_board(game_board):
-    for row in game_board:
+def print_board(game_board, board_width):
+    """
+    Print the game board with column numbers and row numbers.
+    """
+    column_header = ["  "]
+    for column in range(1, board_width + 1):
+        column_header.append(str(column))
+    print(" ".join(column_header))
+
+    for row_index, row in enumerate(game_board, start=1):
+        row_parts = [f"{row_index:2}"]
         for cell in row:
-            print(cell, end=" ")
-        print()
+            row_parts.append(cell)
+        print(" ".join(row_parts))
+
 
 # Prints the piece onto the game screen
 def print_piece(current_piece):
@@ -78,8 +90,10 @@ def get_player_input():
         try:
             x = int(input("Column -> "))
             y = int(input("Row -> "))
-        except:
+        except ValueError:
             print("Invalid coordinates. Please re-enter.")
+        except KeyboardInterrupt:
+            raise
 
     return x, y
 
@@ -129,42 +143,46 @@ def update_board(game_board, height, width, x, y, current_piece):
     return new_board
 
 if __name__=="__main__":
+    try:
+        # Welcome the player
+        clear()
+        height, width = welcome()
+        print()
 
-    # Welcome the player
-    clear()
-    height, width = welcome()
-    print()
+        # Create a heightxwidth board
+        game_board = [(["□"] * width) for x in range(height)]
 
-    # Create a heightxwidth board
-    game_board = [(["□"] * width) for x in range(height)]
+        # Attributes of the game
+        game_round = 0
+        current_piece = 0
 
-    # Attributes of the game
-    game_round = 0
-    current_piece = 0
+        # Main game loop
 
-    # Main game loop
-    while not is_game_done(game_board):
+        while not is_game_done(game_board):
 
-        # Start new round
-        game_round += 1
-        print(f"______________Round: {game_round}______________")
+            # Start new round
+            game_round += 1
+            print(f"______________Round: {game_round}______________")
 
-        # Display current piece
-        print("Current piece:")
-        current_piece = randint(0,4)
-        print_piece(current_piece)
+            # Display current piece
+            print("Current piece:")
+            current_piece = randint(0,4)
+            print_piece(current_piece)
 
-        # Display game board
-        print("Game board:")
-        print_board(game_board)
+            # Display game board
+            print("Game board:")
+            print_board(game_board, width)
 
-        # Get player input
-        x, y = get_player_input()
-        game_board = update_board(game_board, height, width, x, y, current_piece)
+            # Get player input
+            x, y = get_player_input()
+            game_board = update_board(game_board, height, width, x, y, current_piece)
 
-        print(f"\n______________Round: {game_round}______________\n")
+            print(f"\n______________Round: {game_round}______________\n")
 
-    # Game over
-    print("Game over!")
-    print_board(game_board)
-    print(f"\nYou completed the board in {game_round} rounds!")
+        # Game over
+        print("Game over!")
+        print_board(game_board, width)
+        print(f"\nYou completed the board in {game_round} rounds!")
+
+    except KeyboardInterrupt:
+            print("\n\nExiting Game.\n")
