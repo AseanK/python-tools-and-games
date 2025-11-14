@@ -112,6 +112,9 @@ python "file_name.py"
 - [Ludo King](Games/ludo_king)
 - [Magic8Ball](Games/magic8ball)
 - [Chin Chiro](Games/chin_chiro)
+- [Higher or Lower](Games/Higher_lower)
+- [Gamble](Games/gambler)
+- [Memorise cards](Games/memory_game)
 <!--GAMES_END-->
 <br />
 
@@ -137,6 +140,8 @@ python "file_name.py"
 - [Custom Password Generator](Tools/custom_password_generator)
 - [Binary Converter](Tools/binary_converter)
 - [Expense Tracker](<Tools/Expense Tracker>)
+- [Encoding and decoding images](<Tools/Image encoding and decoding>)
+
 <!--TOOLS_END-->
 
 <br />
