@@ -26,5 +26,5 @@ OPPOSITE_DIRECTIONS = {'up': 'down', 'down': 'up', 'left': 'right', 'right': 'le
 TURTLE_SIZE = 20
 
 # Boundary limit, considering the size of the turtle
-BOUNDARY_LIMIT = SCREEN_WIDTH / 2
+BOUNDARY_LIMIT = SCREEN_WIDTH // 2
 
