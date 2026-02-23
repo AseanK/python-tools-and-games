@@ -1,3 +1,6 @@
+from utils import package_installer
+package_installer.install_dependencies()
+
 # Congratulations! you just got a job at python pizza,
 # Your first job is to build an automatic pizza orderin system
 # Based on user's order, work out the final bill

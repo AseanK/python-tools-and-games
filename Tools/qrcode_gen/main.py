@@ -1,3 +1,6 @@
+from utils import package_installer
+package_installer.install_dependencies()
+
 import qrcode
 
 def create(data):

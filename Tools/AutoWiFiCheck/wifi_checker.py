@@ -3,6 +3,10 @@ import subprocess
 import sys
 import time
 from datetime import datetime
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 import schedule as sc
 
 

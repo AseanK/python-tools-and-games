@@ -1,6 +1,11 @@
-import pandas
 import os
 from sys import platform
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+import pandas
+
 
 # Clears command line
 def clear():

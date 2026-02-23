@@ -1,3 +1,9 @@
+import sys
+import re
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 from PyQt5.QtBluetooth import (
     QBluetoothDeviceDiscoveryAgent,
     QBluetoothLocalDevice,
@@ -5,8 +11,6 @@ from PyQt5.QtBluetooth import (
     QBluetoothDeviceInfo
 )
 from PyQt5.QtCore import QCoreApplication, QObject, pyqtSlot
-import sys
-import re
 
 
 class BluetoothScanner(QObject):

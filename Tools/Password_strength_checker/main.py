@@ -1,6 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 import re
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 import nltk
 from nltk.corpus import words
 

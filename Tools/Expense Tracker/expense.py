@@ -1,9 +1,14 @@
 import datetime
 import sqlite3
-from tkcalendar import DateEntry
 from tkinter import *
 import tkinter.messagebox as tb
 import tkinter.ttk as ttk
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+from tkcalendar import DateEntry
+
 
 # Functions
 def list_all_expenses():

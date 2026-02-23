@@ -5,6 +5,9 @@ from time import sleep
 from score import score
 from random import choice
 
+from utils import package_installer
+package_installer.install_dependencies()
+
 # Global val
 SPEEDS = [.08, .07, .06, .05, .04, .03, .02, .01]
 

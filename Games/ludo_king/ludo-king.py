@@ -1,6 +1,10 @@
-import pygame
 import sys
 import random
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+import pygame
 
 # Initialization Pygame
 pygame.init()
