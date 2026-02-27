@@ -10,6 +10,10 @@
 # size = L
 # add_pepperoni = "Y"
 # extra_cheese = "N"
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 import streamlit as st
 
 st.title("Welcome to Python Pizza! 🍕")

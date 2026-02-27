@@ -1,9 +1,9 @@
 import turtle
-from display import Display
 
 from utils import package_installer
 package_installer.install_dependencies()
 
+from display import Display
 import pandas
 
 # Turtle window
