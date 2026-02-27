@@ -1,4 +1,16 @@
-"""Utilities for installing third-party dependencies using pip."""
+"""Utilities for installing third-party dependencies using pip.
+
+To implement the package installer into your project, at the top of your file,
+insert the following:
+
+```
+from utils import package_installer
+package_installer.install_dependencies()
+```
+
+*Make sure you place this code before the third-party import statements*
+Ensure you create a `requirements.txt` for this to work.
+"""
 
 import sys
 import subprocess
