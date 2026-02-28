@@ -1,7 +1,11 @@
-from PyPDF2 import PdfWriter
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+from PyPDF2 import PdfWriter
 
 '''
 You have to install PyPDF2

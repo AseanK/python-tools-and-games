@@ -1,5 +1,10 @@
-from PIL import Image
 import os
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+from PIL import Image
+
 
 def reduce_image_size(image_path, quality=85):
     fileName, ext = os.path.splitext(image_path)

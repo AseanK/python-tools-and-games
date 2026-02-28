@@ -1,6 +1,10 @@
 import turtle
-import pandas
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 from display import Display
+import pandas
 
 # Turtle window
 screen = turtle.Screen()

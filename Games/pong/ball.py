@@ -1,5 +1,5 @@
 from turtle import Turtle
-from playsound import playsound 
+from playsound import playsound
 
 # Create a ball
 class Ball(Turtle):

@@ -2,8 +2,12 @@ import turtle
 import time
 import random
 import winsound
-import pygame
 from constants import *
+
+from utils import package_installer
+package_installer.install_dependencies()
+
+import pygame
 
 # Global variables
 game_delay = INITIAL_DELAY

@@ -1,10 +1,13 @@
-from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize
-from nltk.tokenize import word_tokenize
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 
+from utils import package_installer
+package_installer.install_dependencies()
+
+from nltk.corpus import stopwords
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
 
 #please run: pip install nltk
 

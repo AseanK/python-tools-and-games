@@ -1,6 +1,10 @@
 import random
 import os
 from sys import platform
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 from colorama import Fore
 
 # Clears command line

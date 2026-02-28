@@ -1,6 +1,10 @@
+import time
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 
 
 # You have to download the driver for your own web-browser

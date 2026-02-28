@@ -3,17 +3,21 @@ Project 1: Web Based Game
 Author: Ruchit Tripathi
 '''
 
+import random
+import time
+import numpy as np
+import json as js
+import requests as rq
+from datetime import datetime, timedelta
+
+from utils import package_installer
+package_installer.install_dependencies()
+
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-import numpy as np
 import pandas as pd
-import json as js
-import requests as rq
-import time
-from datetime import datetime, timedelta
 import altair as alt
-import random
 
 # Logic to add background images (Future Enhancement)
 # def set_bg_hack_url():
