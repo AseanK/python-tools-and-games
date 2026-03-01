@@ -59,13 +59,14 @@ def install_dependencies(requirements_file: str | Path = "requirements.txt",
         OSError: Failed to read requirements file.
         RuntimeError: Failed to install packages.
     """
-    print("\nInstalling third-party dependencies...\n")
     
     requirements = _read_requirements_file(requirements_file)
     if not requirements:
         return
 
     pip_upgraded = False
+    new_installed = False
+    first = True
     for pkg_name, spec in requirements.items():
         requirement = f"{pkg_name}{spec}" if spec else pkg_name
         installed = True
@@ -73,6 +74,7 @@ def install_dependencies(requirements_file: str | Path = "requirements.txt",
             import_module(pkg_name)
         except ModuleNotFoundError:
             installed = False
+            new_installed = True
 
         if installed and not check_updates:
             continue
@@ -82,15 +84,21 @@ def install_dependencies(requirements_file: str | Path = "requirements.txt",
             if (installed_version and latest_version and
                     _is_latest(installed_version, latest_version)):
                 continue
+        
+        if first:
+            first = False
+            print("\nInstalling third-party dependencies...")
 
         try:
             if update_pip and not pip_upgraded:
-                print("\nUpgrading pip...\n")
+                print("\nUpgrading pip first...\n")
                 subprocess.check_call(
                     [sys.executable, "-m", "pip", "install", "--upgrade",
                      "pip"]
                 )
                 pip_upgraded = True
+                print("\nSuccessfully upgraded pip.")
+                print("\nInstalling packages...\n")
 
             install_cmd = [sys.executable, "-m", "pip", "install"]
             if check_updates:
@@ -105,9 +113,10 @@ def install_dependencies(requirements_file: str | Path = "requirements.txt",
                 f"\nFailed to install '{pkg_name}'. Please install it manually."
             )
         
-    print("\nSuccessfully installed dependencies.")
-    print("Resuming program...")
-    print("\n==============================\n")
+    if new_installed:
+        print("\nSuccessfully installed dependencies.")
+        print("Resuming program...")
+        print("\n==============================\n")
 
 
 def _get_installed_version(pkg_name: str) -> str | None:
