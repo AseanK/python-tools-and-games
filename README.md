@@ -141,6 +141,7 @@ python "file_name.py"
 - [Binary Converter](Tools/binary_converter)
 - [Expense Tracker](<Tools/Expense Tracker>)
 - [Encoding and decoding images](<Tools/Image encoding and decoding>)
+- [Encrypt and Decrypt Tool](Tools/encrypt_decrypt_tool)
 
 <!--TOOLS_END-->
 
